@@ -1,0 +1,14 @@
+TITLE: Jetzt geht es ans eingemachte!
+AUTHOR: Sven Bergner
+DATE: Freitag, den 23. Juli 2004 um 15:17
+DESC: SCO zweifelt ELF-Lizenz an
+-----
+BODY:
+In dem Artikel &quot;<a
+      href="http://www.groklaw.net/article.php?story=20040722135616439">Eine
+      Geschichte über ELF</a>&quot; erfährt man einiges über die
+      Hintergründe zu dem in Linux verwendeten ELF-Dateiformat.
+SCO ist jetzt auf die Idee gekommen die Gültigkeit der Lizenzen in
+      Frage zu stellen. Ich bin wirklich mal gespannt, was dennen noch
+      alles einfällt.
+END-----

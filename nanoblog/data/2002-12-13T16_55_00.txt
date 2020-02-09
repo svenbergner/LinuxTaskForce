@@ -1,0 +1,11 @@
+TITLE: Upload Test 
+AUTHOR: Sven Bergner
+DATE: Freitag, den 13.12.2002 um 16:55 Uhr
+-----
+BODY:
+<p>   Upload-Test
+  
+   Auf der Download-Seite gibt es die neuste Version meines
+   KDE-Buildscriptes.
+</p>
+END-----

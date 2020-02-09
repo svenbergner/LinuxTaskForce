@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="$BLOG_CHARSET"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="$BLOG_MIMETYPE; charset=$BLOG_CHARSET" />
+<meta name="generator" content="NanoBlogger $VERSION" />
+<meta name="robots" content="all" />
+<meta name="revisit-after" content="31 days" />
+
+<title>$BLOG_TITLE</title>
+
+<link rel="stylesheet" href="${BASE_URL}$BLOG_CSS" type="text/css" />
+<link rel="shortcut icon" href="${BASE_URL}$BLOG_ICON" />
+$NB_AtomAltLink
+$NB_RSS2AltLink
+$NB_RSSAltLink
+</head>
+
+<body>
+
+<div id="banner">
+	<h1><a href="${BASE_URL}$NB_INDEX" accesskey="1">$BLOG_TITLE</a></h1>
+	<span class="description">$BLOG_DESCRIPTION</span>
+</div>
+<div id="content">
+	<a id="top"></a>
+	<div class="blog">
+		$NB_MetaBody
+		<div class="menu">
+			<a href="#top">$NB_TopPage</a>
+			$NB_PageLinks
+		</div>
+	</div>
+</div>
+<div id="links">
+	<div class="calendar">
+		$NB_Calendar
+	</div>
+	<div class="side">
+		$NB_ArticleLinks
+	</div>
+	<div class="sidetitle">
+		Links
+	</div>
+	<div class="side">
+		$NB_MainLinks
+	</div>
+	<div class="sidetitle">
+		Recent Entries
+	</div>
+	<div class="side">
+		$NB_RecentEntries
+	</div>
+	<div class="sidetitle">
+		Categories
+	</div>
+	<div class="side">
+		$NB_CategoryLinks
+	</div>
+	<div class="sidetitle">
+		Archives
+	</div>
+	<div class="side">
+		<a href="${BASE_URL}$ARCHIVES_DIR/$NB_INDEX">Archive Index</a><br />
+		$NB_YearLinks
+		<!-- $NB_MonthLinks -->
+	</div>
+	<div class="syndicate">
+		Syndicate this site: <a href="${BASE_URL}rss.$NB_SYND_FILETYPE">RSS</a>,
+		<a href="${BASE_URL}atom.$NB_SYND_FILETYPE">Atom</a>
+	</div>
+	<div class="sidetitle">
+		Contact
+	</div>
+	<div class="side">
+		$BLOG_CONTACT
+	</div>
+	<div class="sidetitle">
+		Weblog Status
+	</div>
+	<div class="side">
+		$NB_BlogStatus
+	</div>
+	<div class="powered">
+		Powered by<br />
+		<a href="http://nanoblogger.sourceforge.net">NanoBlogger $VERSION</a><br />
+	</div>
+</div>
+
+</body>
+</html>
+

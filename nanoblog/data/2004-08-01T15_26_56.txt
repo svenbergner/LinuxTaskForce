@@ -1,0 +1,35 @@
+TITLE: Muss Linux bereit für den Desktop sein?
+AUTHOR: Sven Bergner
+DATE: Sonntag, den 01. August 2004 um 15:26
+DESC: Muss Linux bereit für den Desktop sein?
+-----
+BODY:
+<p>Immer wieder wird von den verschiedensten Leuten, Firmen und
+Organisationen die Frage aufgeworfen, ob Linux bereit f&uuml;r den Desktop
+ist. In einem Artikel auf <a href="www.osnews.com">OSnews</a> gab es
+erneut einen in diese Richtung gehenden <a
+href="www.osnews.com/story.php?news_id=7813">Artikel</a>. Der Autor
+    dieses Artikels wollte 
+zun&auml;chst einmal kl&auml;ren, was man unter der Aussage &quot;Ready for the
+Desktop&quot; versteht und stellte die Behauptung auf, dass die
+meisten Leute mit &quot;Ready for the Desktop&quot; eigentlich meinen,
+"Bereit Microsoft zu ersetzen". Mir gef&auml;llt diese Sichtweise. Ich
+denke es trifft die Situation ziemlich genau. 
+</p><p>
+Was ich mich allerdings dabei gefragt habe ist, wollen die
+Linux-Freaks und die Linux-Hacker das &uuml;berhaupt. Warum benutzt man
+denn Linux? Doch nicht zuletzt, weil Linux Linux ist und nicht, weil
+es ein besseres Windows darstellt. Wenn ich Windows benutzen wollte,
+dann w&uuml;rde ich das tun. Aber ich habe mich ja bewusst f&uuml;r Linux
+entschieden.
+</p><p>
+Ich gehe mal davon aus, dass es den Leuten, die sich aktiv an der
+Entwicklung von Linux und all seinen Tools und Komponenten beteiligen
+das genauso sehen. Und deshlab wird es sicherlich bestimmte Arten von
+Software unter Linux in absehbarer Zeit nicht geben, was dann f&uuml;r die
+Leute, die auf diese Art von Software warten bedeutet, dass Linux noch
+lange nicht Reif f&uuml;r den Desktop ist, obwohl ich es schon seit Jahren
+als Desktop-Betriebsystem einsetze.
+</p><p>
+Ich hoffe, dass ich recht behalte.</p>
+END-----

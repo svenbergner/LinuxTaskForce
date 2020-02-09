@@ -1,0 +1,9 @@
+TITLE: Update des Hacker-Howto
+AUTHOR: Sven Bergner
+DATE: Mittwoch, den 21. Januar 2004 um 17:37 Uhr
+-----
+BODY:
+<p>    Ich habe die &Uuml;bersetzung des Hacker-Howto an den Stand vom
+    20.01.2004 von ESR angepasst. War nicht viel zu
+    &auml;ndern. Lediglich ein paar Links und Tippfehler.</p>
+END-----

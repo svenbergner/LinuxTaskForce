@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title type="html">NanoBlogger Help</title>
+<link rel="alternate" type="text/html" href="http://www.linuxtaskforce.de/LTF-Story" />
+<link rel="self" type="application/atom+xml" href="http://www.linuxtaskforce.de/LTF-Story/archives/cat_1/index-atom.xml" />
+<updated>2006-01-23T16:48:49+01:00</updated>
+<author>
+<name>Sven Bergner</name>
+<uri>http://www.linuxtaskforce.de/LTF-Story</uri>
+</author>
+<id>http://www.linuxtaskforce.de/LTF-Story/</id>
+<generator uri="http://nanoblogger.sourceforge.net" version="3.3 RC3">NanoBlogger</generator>
+<entry>
+<title type="html">Welcome to NanoBlogger 3.3!</title>
+<author>
+<name>n1xt3r</name>
+</author>
+<link rel="alternate" type="text/html" href="http://www.linuxtaskforce.de/LTF-Story/archives/2006/01/23/T16_41_54/" />
+<id>http://www.linuxtaskforce.de/LTF-Story/archives/2006/01/23/T16_41_54/</id>
+<published>2006-01-23T16:41:54+01:00</published>
+<updated>2006-01-23T16:41:54+01:00</updated>
+<category term="NanoBlogger Help" />
+<content type="xhtml">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<p>The basic syntax is: 
+<code>nb [-b blog_dir] [options]</code></p>
+<b>How to ...</b>
+<ul>
+<li>create new weblog (directory) = 
+<code>nb -b [blog_dir] -a</code></li>
+<li>create new entry = 
+<code>nb -a</code></li>
+<li>create new category = 
+<code>nb -c 
+<em>new</em>-a</code></li>
+<li>create new entry with category = 
+<code>nb -c [cat_id] -a</code></li>
+<li>list entries = 
+<code>nb -l [all|DATE|max]</code></li>
+<li>list categories = 
+<code>nb -l 
+<em>cat</em></code></li>
+<li>list entries by category = 
+<code>nb -c [cat_id] -l [all|DATE|max]</code></li>
+<li>edit entry = 
+<code>nb -e [entry_id]</code></li>
+<li>move entry to category = 
+<code>nb -c [cat_id] -m [entry_id]</code></li>
+<li>delete entry = 
+<code>nb -d [entry_id]</code></li>
+<li>delete category = 
+<code>nb -c [cat_id] -d 
+<em>cat</em></code></li>
+<li>delete entry from category = 
+<code>nb -c [cat_id] -d [entry_id]</code></li>
+<li>draft entry = 
+<code>nb -E [draft_file]</code></li>
+<li>import draft as entry = 
+<code>nb -f [draft_file] -a</code></li>
+<li>force update of weblog files = 
+<code>nb -u [all|DATE|main]</code></li>
+</ul>
+<p>Thank you for trying NanoBlogger. Please direct comments and suggestions to the 
+<a href="http://groups.yahoo.com/group/nanoblogger/">mailing list</a>or submit a bug report to the 
+<a href="http://sourceforge.net/tracker/?atid=635240&amp;group_id=103576&amp;func=browse">project page</a>on sourceforge.net.</p>
+</div>
+</content>
+</entry>
+</feed>

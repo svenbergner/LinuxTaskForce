@@ -1,0 +1,9 @@
+TITLE: Bannerlink Mountain Dew
+AUTHOR: Sven Bergner
+DATE: Dienstag, den 14.10.2003 um 16:41 Uhr
+-----
+BODY:
+<p>Auf der Index-Seite habe ich einen Banner-Link zur <a href="http://www.mountaindew.de/">Mountain Dew-Seite</a>
+   eingef&uuml;gt. Auf der FAQ-Seite habe ich mit einer &Auml;quivalenzliste begonnen.
+</p>
+END-----

@@ -1,0 +1,12 @@
+TITLE: Es geht voran!!!
+AUTHOR: Sven Bergner
+DATE: Mittwoch, den 10.12.2003 um 21:35 Uhr
+-----
+BODY:
+<p>Manchmal geschehen doch noch Zeichen und Wunder.
+Endlich habe ich herausgefunden, warum der Emacs keine Lust hatte
+deutsche Umlaute darzustellen. Die Shell hat behauptet ein xterm zu
+sein. Das konnte ja nicht funktionieren.
+Jetzt gehts das ist di Hauptsache.
+Die &Uuml;bersetzung vom Hacker-Howto nimmt auch langsam Formen an.</p>
+END-----

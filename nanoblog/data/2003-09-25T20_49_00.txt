@@ -1,0 +1,7 @@
+TITLE: Jetzt mit CSS
+AUTHOR: Sven Bergner
+DATE: Donnerstag, den 25.09. 2003 um 20:49 Uhr
+-----
+BODY:
+<p>Weiterer Ausbau der Seite. Erstmals Einsatz von CSS.</p>
+END-----

@@ -1,0 +1,9 @@
+TITLE: Der Umstieg ist geschafft
+AUTHOR: Sven Bergner
+DATE: Donnerstag, den 05. Februar 2004 um 17:30 Uhr
+-----
+BODY:
+<p>    Heute habe ich meine alten Blog-Eintr&auml;ge, die ich bisher mit
+    Blosxom gemacht habe, komplett auf <a herf="http://home.columbus.rr.com/n1xt3r/nanoblogger/">nanoblogger</a> umgestellt. Das ging
+    erfreulich einfach.</p>
+END-----

@@ -1,0 +1,710 @@
+<!-- Design by Leandro Pereira Copyleft (c) 2000 < leandro@linuxmag.com.br > -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//DE"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Die Hacker-FAQ</title>
+  <link rev="made" href="mailto:Murphy.Gebert@gmx.de"></link>
+  <link rel="stylesheet" href="../sitestyle.css" type="text/css"></link>
+  <meta name="description" content="Hacker-FAQ translation"></meta>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+  <meta name="description" content = "Die Hacker-FAQ"/>
+  <meta name="keywords" content="Hacker, FAQ, german"/>
+  <meta name="author" content="Martin Gebert"/>
+  <meta name="last-update" content="21.03.2005"/>
+</head>
+
+<body>
+
+<center>
+  <h1>Linux Task Force</h1>
+</center> <!-- Ende Kopfteil -->
+
+<table align="center" summary="Menuleiste">
+ <tbody>
+  <tr>
+    <td bgcolor="#607565" align="center">
+    <font color="#8daa94"><b>&lt;</b></font> <a href="../index.html">Index</a> 
+<!--    <font color="#8daa94">/</font> <a href="../neuigkeiten.html">Neuigkeiten</a>-->
+    <font color="#8daa94">/</font> <a href="../nanoblog/index.html">Tagebuch</a>
+    <font color="#8daa94">/</font> <a href="../projekte.html">Projekte</a>
+    <font color="#8daa94">/</font> <a href="../howtos/faqhowto.html"><b>FAQ's &amp; HowTo's</b></a>
+    <font color="#8daa94">/</font> <a href="../uebermich.html"><b>&Uuml;ber mich</b></a>
+<!--    <font color="#8daa94">/</font> <a href="../gedanken.html">Gedanken &amp; Ideen</a> -->
+    <font color="#8daa94">/</font> <a href="../links.html">Links</a>
+    <font color="#8daa94"><b>&gt;</b></font>
+    </td>
+   </tr>
+  </tbody>
+</table> <!-- Ende Menu -->
+
+<div id="Content">
+<h3>Vorwort zur deutschen Übersetzung</h3>
+<p>
+  Aufgrund einer sehr undifferenzierten Berichterstattung in (fast) allen
+  populären Medien denkt der durchschnittliche Bürger (und Manager) bei dem
+  Begriff "Hacker" vor allem an geknackte Paßwörter, leergeräumte Bankkonten
+  und geklaute Firmengeheimnisse, vielleicht sogar an versehentlich begonnene
+  Atomkriege.
+  Daß Hacker aber eigentlich nur Bastler sind, die den Lötkolben mit der
+  Tastatur vertauscht haben (zumindest für den größten Teil ihrer [freien]
+  Zeit), im Laufe ihrer annähernd 50jährigen Geschichte eine eigene und sehr
+  lebendige Kultur, Ethik und Traditionen entwickelt haben und im Umgang
+  mit dem Computer und dem Erkunden seiner Möglichkeiten vor allem Spaß
+  und Möglichkeiten zur persönlichen Entfaltung und Entwicklung suchen
+  (und finden), kommt hierbei zu kurz. Kriminelle Elemente wie z. B. Cracker,
+  Spammer oder Warez-Kidz werden von den Hackern selbst nicht als Bestandteil
+  ihrer Gesellschaft akzeptiert, aber oft mit ihnen assoziiert.
+  Diese Punkte werden in <i>Eric S. Raymonds</i>
+  <a href="http://www.catb.org/~esr/faqs/hacker-howto.html">How To Become A Hacker</a>
+  (deutsche Übersetzung:
+  <a href="http://www.linuxtaskforce.de/hacker-howto-ger.html">Wie werde ich ein Hacker?</a>),
+  <a href="http://catb.org/~esr/writings/hacker-history/hacker-history.html">A Brief History of Hackerdom</a>
+  und
+  <a href="http://catb.org/~esr/jargon/">The New Hacker's Dictionary</a>
+  ausführlich, informativ und sachlich beleuchtet.<br/>
+  Der Zweck <b>dieser FAQ</b> (FAQ =
+  "<u>F</u>requently <u>A</u>sked <u>Q</u>uestions", "häufig gestellte
+  Fragen") ist jedoch, Managern, Abteilungsleitern und Mitarbeitern,
+  welche die Freude (und manchmal auch die Last) haben nun
+  mit einem Hacker zusammenzuarbeiten, den richtigen und pfleglichen Umgang mit
+  dieser im normalen Arbeitsleben (außer bei Softwareherstellern) doch sehr
+	seltenen Spezies näherzubringen. Bei korrekter Pflege wird Ihnen Ihr
+  Hacker viel Freude bereiten und lange erhalten bleiben.
+</p>
+<p>
+  Hinweise zur Übersetzung:
+</p>
+<ul>
+  <li>
+    Auf Hacker wird im Text der FAQ häufig in der femininen Form ("she's
+    curious") Bezug genommen, obwohl dieser Bereich eindeutig (und
+    bedauerlicherweise) männlich dominiert ist (oder die weiblichen Hacker
+    verstehen es einfach, sich gut zu tarnen). Der Grund dafür ist nicht
+    bekannt; betrachten Sie es einfach als Aufforderung zur Reflexion über die
+    Geschlechterverteilung in diesem Bereich. Die entsprechenden Stellen
+    wurden so übernommen.<br/>
+    Es gibt keine weibliche Form von "Hacker" ("Häckse" wurde einstimmig
+    abgelehnt), so daß es hier bei der neutralen Form "der Hacker" bleibt.
+  </li>
+  <li>
+    Das soziale Umfeld der Hackergemeinschaft wird im
+    englischen/<wbr/>US-<wbr/>amerikanischen/<wbr/>Internet-<wbr/>Sprachgebrauch
+    auch oft als "Geeks" oder "Nerds" bezeichnet. Das sind i. d. R.
+    Leute die eine Affinität zur Hackerkultur zeigen, obwohl sie selbst
+    evtl. nicht die technischen Fähigkeiten eines "typischen" Hackers
+    aufweisen; die Übergänge sind hier aber fließend und die Schnittmengen
+    groß. Ein einigermaßen treffender, im Deutschen gebräuchlicher Begriff wäre
+    "Freak".
+  </li>
+  <li>
+    Ohne die exzellente Hilfe der Online-Wörterbücher von
+    <a href="http://dict.tu-chemnitz.de">TU Chemnitz</a>,
+    <a href="http://dict.leo.org">LEO - TU München</a> und
+    <a href="http://www.dictionary.com">Dictionary.com</a>
+    wäre diese Übersetzung in dieser Form nie zustande gekommen.
+  </li>
+</ul>
+
+<p>
+  Die Weitergabe dieses Dokuments ist in vollständiger, unveränderter Form,
+  unter Beachtung der
+  <a href="#copyleft">Bedingungen des Autors</a>
+  und bei Angabe der Quelle gestattet.
+</p>
+
+<p>
+  Martin Gebert<br/>
+  eMail: Murphy punkt Gebert ät gmx punkt de
+</p>
+
+<hr>
+
+<h3>NEUIGKEITEN!</h3>
+
+<p>
+  Eine Version dieses Papiers wurde von
+  <a href="http://www.ibm.com/developerworks/">IBM DeveloperWorks</a>
+  gekauft.
+</p><p>
+  Außerdem sponserte IBM einen weiteren Artikel, die
+  <a href="http://www.plethora.net/%7Eseebs/faqs/manager.html">Manager-FAQ</a>,
+  eine Anleitung zu Managern für Hacker die vom Arbeitsleben frustriert und
+  verwirrt sind. Ich möchte IBM für ihre freundliche Unterstützung dieses
+  Projekts danken. Ich bin ziemlich froh über dieses neue Stück, und daß ich
+  schließlich gedrängt wurde es zu veröffentlichen.
+</p><p>
+  Ich möchte erwähnen wie verständig und freundlich IBM diesbezüglich war;
+  verglichen mit der Art in der CRC Eric Weisstein behandelt hat.
+</p>
+
+<h3>Die Hacker-FAQ</h3>
+
+<p>
+  Die folgende Liste ist ein Versuch, einige der Probleme aufzuzeigen, die
+  unvermeintlich auftauchen wenn Personen ohne vorherige Erfahrung mit der
+  Hacker-<wbr/>Gemeinde versuchen einen Hacker anzuwerben.
+  <a name="copyleft"></a>Diese FAQ ist zur freien Weitergabe gedacht und darf
+  nach Wunsch kopiert werden. Sie ist eine frühe Revision. Wenn Sie die FAQ
+  modifizieren oder zwecks Veröffentlichung weitergeben möchten, dann
+  kontaktieren Sie bitte den Autor.
+  Der Autor ist <a href="mailto:seebs@plethora.net">seebs@plethora.net</a>.
+  Die offizielle Seite dieser Veröffentlichung (von Revision 0.05) ist
+  &quot;<a href="http://www.plethora.net/%7Eseebs/faqs/hacker.html">http://www.plethora.net/~seebs/faqs/hacker.html</a>&quot;.
+</p><p>
+  HINWEIS: Der Autor ist ein Hacker. Voreingenommenheit ist unvermeidbar.
+</p><p>
+  Dieses Dokument ist &copy; 1995, 1996, 1998, 1999 Peter Seebach.
+  Die unveränderte Weitergabe ist gestattet.
+</p><p>
+  Revision 0.05 - Letzte Änderung 28. September 1999
+</p>
+
+<h2>Fragen und Antworten:</h2>
+<h3><a name="section-0"></a>Abschnitt 0: Grundsätzliches Verständnis</h3>
+<dl>
+  <dt>
+    <a name="question-0.0"></a>0.0:
+    Wird mein Hacker nicht in meinen Computer eindringen und meine
+    Geschäftsgeheimnisse stehlen?
+  </dt>
+  <dd><p>
+    Nein. Hacker sind, im Gegensatz zur Darstellung in den Medien, nicht die
+    Leute die in Computer einbrechen. Das sind Cracker. Hacker sind Personen
+    die gerne mit Computern spielen. Ihr Hacker wird vielleicht gelegentlich
+    Sicherheitsmaßnahmen umgehen, aber nicht aus Arglist; sie macht das nur
+    wenn ihr die Sicherheit im Weg steht [Anm. d. Ü.: bei der Arbeit],
+    oder weil sie neugierig ist [Anm. d. Ü.: auf deren Funktionsweise].
+  </p></dd>
+
+  <dt>
+    <a name="question-0.1"></a>0.1:
+    War es eine gute Idee einen Hacker anzustellen?
+  </dt>
+  <dd>
+    <p>
+      Das hängt von der Aufgabe ab. Ein Hacker kann wesentlich effektiver sein
+      als ein Nicht-Hacker, oder wesentlich weniger effektiv. Tätigkeiten, in
+      denen Hacker besonders gut sind, wären:
+    </p>
+    <ul>
+      <li>Systemadministration</li>
+      <li>Programmierung</li>
+      <li>[Software-] Design</li>
+    </ul>
+    <p>
+      Tätigkeiten, in denen Hacker besonders schlecht sind, wären:
+    </p>
+    <ul>
+      <li>Datenerfassung</li>
+    </ul>
+    <p>
+      Allgemeiner gesagt, bei einer Aufgabe die schnelle und unerwartete
+			Anpassungen und besonderes Können erfordert und nicht allzu monoton ist
+			wird sich ein Hacker hervortun. Wiederholende, einfache Arbeiten sind eine
+      Verschwendung eines guten Hackers und werden Ihren Hacker langweilen und
+      frustrieren. Niemand arbeitet gut wenn er/sie gelangweilt und frustriert
+      ist.
+    </p><p>
+      Die gute Nachricht ist, wenn Sie einen Hacker auf etwas ansetzen
+      das ihm besonders gefällt werden Sie oft Leistungen sehen die fünf- bis
+      zehnmal höher liegen als das was ein "normaler" Arbeiter schafft. Dies
+      ist nicht allgemeingültig, und Sie sollten nicht
+      erwarten daß es ständig auftritt, aber es wird vorkommen.
+      Dies wird besonders bei sehr schwierigen Aufgaben sichtbar.
+    </p>
+  </dd>
+
+  <dt>
+    <a name="question-0.2"></a>0.2:
+    Wie soll ich meinen Hacker managen?
+  </dt>
+  <dd><p>
+    Auf die gleiche Art wie Sie
+    <a name="herd"></a><a href="#ref1">Katzen hüten<sup>1</sup></a>.
+    Es kann etwas verwirrend sein; sie sind nicht wie die meisten anderen
+    Arbeiter. Keine Sorge! Ihr Hacker wird wahrscheinlich willens sein, Lösungen
+    für Probleme vorzuschlagen wenn er gefragt wird. Die meisten Hacker sind
+    annähernd selbstverwaltend.
+  </p></dd>
+
+  <dt>
+    <a name="question-0.3"></a>0.3:
+    Moment, Sie sagten gerade "10 Mal", richtig?
+    Sie meinen das nicht ernst, oder?
+  </dt>
+  <dd>
+    <p>
+      Ich sagte tatsächlich "zehnmal". Und ja, ich meine das ernst; ein
+      Hacker in Fahrt kann in der Lage sein, über einen Zeitraum von einigen
+      Monaten etwas zu produzieren was für eine kleine Entwicklergruppe
+      (sagen wir 7-8 Personen) ein schweres Stück Arbeit für ein Jahr wäre.
+      Er kann auch nicht. Ihre Laufleistung kann abweichen.
+    </p><p>
+      IBM pflegte zu berichten daß bestimmte Programmierer 100 Mal produktiver
+      sein können wie andere Arbeiter, oder mehr. Das kommt vor.
+    </p>
+  </dd>
+
+  <dt>
+    <a name="question-0.4"></a>0.4:
+    Ich verstehe das überhaupt nicht. Das ist verwirrend. Gibt es dazu ein
+    Buch?
+  </dt>
+  <dd><p>
+    Noch nicht. In der Zwischenzeit werfen Sie einen Blick in
+    <i>The New Hacker's Dictionary</i> (Verweis unten; auch bekannt als
+    "The Jargon File"), insbesondere einige der Anhänge. Das gesamte Werk ist
+    voll von Klarstellungen und Details wie Hacker denken.
+  </p></dd>
+</dl>
+
+<h3><a name="section-1"></a>Abschnitt 1: Soziale Fragen</h3>
+<dl>
+  <dt>
+    <a name="question-1.0"></a>1.0:
+    Mein Hacker fügt sich nicht gut in die Belegschaft ein. Sie scheint
+    ihre Arbeit gut zu machen, aber sie findet nicht gerade viele Freunde.
+  </dt>
+  <dd><p>
+    Das ist normal. Ihr Hacker hat vermutlich keine Personen im näheren Umkreis
+    gefunden, die mit Hackern zurechtkommen. Sie könnten ihr eine
+    Heimarbeitsstelle anbieten oder flexible Arbeitszeiten (lies:
+    Nachtschicht), was ihre Produktivität wirklich steigern könnte. Oder
+    noch einen einstellen.
+  </p></dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-1.1"></a>1.1:
+    Mein Hacker scheint sich sonderlich zu kleiden. Gibt es irgendeine
+    Möglichkeit ihm die Bedeutung von unternehmensweiten Bekleidungsregeln
+    nahezubringen?
+  </dt>
+  <dd><p>
+    Ihr Hacker versteht die Bedeutung von Bekleidungsregeln sehr gut. Sie helfen
+    nicht die Arbeit zu erledigen. IBM, Ford und Microsoft haben alle
+    verstanden daß Leute besser arbeiten wenn sie sich kleiden können wie sie
+    wollen. Ihr Hacker ist komfortabel gekleidet. Eine höfliche Bitte, sich für
+    besondere Anlässe gut anzuziehen, wird sicherlich akzeptiert, und die
+    meisten Hacker werden gerne Bekleidung ohne (ungewollte) Löcher darin
+    tragen wenn sie diesbezüglich gefragt werden.
+  </p></dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-1.2"></a>1.2:
+    Mein Hacker will mich nicht mit meinem Titel ansprechen, und scheint mich
+    auch sonst nicht zu respektieren.
+  </dt>
+  <dd><p>
+    Ihr Hacker respektiert nicht Ihren Titel. Hacker glauben nicht, daß das
+    Management "über" der Technik steht; sie glauben daß das Management eine
+    Aufgabe erfüllt und die Techniker eine andere. Sie mögen auch oft so
+    reden als ob das Management unter ihnen steht, aber das ist nur fair;
+    Ihre Frage impliziert daß Sie reden als stünden Techniker unter Ihnen.
+    Behandeln Sie Ihren Hacker wie einen Gleichgestellten, und sie wird Sie
+    wahrscheinlich auch wie einen Gleichgestellten behandeln &ndash; ein
+		ziemliches Kompliment!
+  </p></dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-1.3"></a>1.3:
+    Mein Hacker meckert ständig über die Arbeit meiner anderen Mitarbeiter.
+  </dt>
+  <dd>
+    <p>
+      Nehmen Sie Ihren Hacker beiseite und fragen Sie ihn nach Details darüber,
+      was bei der bestehenden Arbeit schiefläuft. Es wäre möglich daß damit
+      etwas nicht stimmt. Lassen Sie sich nicht davon täuschen daß es die
+      meiste Zeit läuft; Ihr Hacker ist vermutlich beunruhigt daß es überhaupt
+      Probleme gibt. Er könnte auch in der Lage sein Verbesserungen
+      vorzuschlagen, die Leistung, Verläßlichkeit und andere Eigenschaften
+      erheblich steigern könnten. Es lohnt sich näher hinzusehen.
+    </p><p>
+      Sie können Ihren Hacker möglicherweise davon überzeugen höflicher zu
+      sein, aber wenn augenscheinlich große Differenzen bestehen wäre es ebenso
+      möglich daß einer oder mehrere Ihres augenblicklichen Personals
+			inkompetent sind.
+      Beachten Sie daß Hacker natürlich andere Standards bezüglich Kompetenz
+      haben als viele andere Leute. (Lies "andere" als "viel höhere".)
+    </p>
+  </dd>
+</dl>
+
+<h3><a name="section-2"></a>Abschnitt 2: Produktivität</h3>
+<dl>
+  <dt>
+    <a name="question-2.0"></a>2.0:
+    Mein Hacker spielt Computerspiele während der Arbeitszeit.
+  </dt>
+  <dd><p>
+    Hacker, Schriftsteller und Maler brauchen immer eine gewisse Zeit in der
+    sie etwas "einsickern" lassen können &ndash; etwas anderes tun um ihr
+    Unterbewußtsein an einem Problem arbeiten zu lassen. Ihr Hacker ist
+    wahrscheinlich mit etwas Schwierigem beschäftigt. Machen Sie sich darüber
+    keine Sorgen.
+  </p></dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-2.1"></a>2.1:
+    Aber es ist zwei Wochen her daß ich irgendetwas bekam!
+  </dt>
+  <dd><p>
+    Ihr Hacker arbeitet, möglicherweise alleine, an einem großen Projekt
+    und hat gerade angefangen, richtig? Sie versucht vielleicht, alles im
+    Voraus durchzudenken. Fragen Sie sie wie's läuft; wenn sie viele Sätze
+    anfängt, aber alle mit "nein, Moment..." oder "Mist, das wird nicht
+    funktionieren" abbricht geht es gut voran.
+  </p></dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-2.2"></a>2.2:
+    Ist das nicht der Produktivität abträglich?
+  </dt>
+  <dd><p>
+    Nein. Ihr Hacker muß sich entspannen und vielerlei überdenken. Er wird
+    mit dieser Entspannung produktiver sein als ohne. Ihr Hacker genießt
+    es zu arbeiten; machen Sie sich keine Sorgen darüber daß alles angemessen
+    gut und schnell erledigt wird.
+  </p></dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-2.3"></a>2.3:
+    Mein Hacker macht ständig Sachen die nicht in ihre Zuständigkeit fallen.
+  </dt>
+  <dd><p>
+    Müssen diese erledigt werden? Nur wenige Hacker können widerstehen ein
+    Problem zu lösen, wenn sie es lösen können und kein anderer es tut. Was
+    das angeht, erledigt Ihr Hacker ihre Arbeiten? Wenn ja dann betrachten Sie
+    diese anderen Arbeiten als kostenlose Zugabe (für Sie). Auch wenn es nicht
+    gebräuchlich sein mag hilft es vermutlich doch etwas weiter.
+  </p></dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-2.4"></a>2.4:
+    Mein Hacker schreibt ein Buch, liest USENET-Nachrichten, spielt
+    Computerspiele, telefoniert mit Freunden und baut Skulpturen aus
+    Büroklammern. Während der Arbeitszeit!
+  </dt>
+  <dd>
+    <p>
+      Hört sich an als wäre er glücklich. Es besteht die Möglichkeit daß er
+      sich in einem von drei Stadien befindet:
+    </p>
+    <ol>
+      <li>
+        Grundlegende Aufgaben sind wiederkehrende Arbeiten (telefonische
+        Unterstützung, Dokumentation u. ä.) und es gibt eine Flaute bei der
+        eingehenden Arbeit. Machen Sie sich darüber keine Sorgen!
+      </li>
+      <li>Ihr Hacker arbeitet an einem schwierigen Problem.</li>
+      <li>
+        Ihr Hacker ist tödlich gelangweilt und sucht Unterhaltung. Vielleicht
+        sollten Sie ihm eine anspruchsvollere Arbeit suchen?
+      </li>
+    </ol>
+    <p>
+      Einer dieser Faktoren kann beteiligt sein. Alle können beteiligt sein.
+      Alles in allem, wenn die Arbeit anspruchsvoll ist und erledigt wird
+      dann zerbrechen Sie sich nicht zu sehr den Kopf über diesen Prozeß.
+      Sie könnten anfragen ob Ihr Unternehmen für die Unterstützung in dem Buch
+			mit einer Zeile der Anerkennung erwähnt wird.
+    </p>
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-2.5"></a>2.5:
+    Aber meine anderen Mitarbeiter nehmen meinem Hacker seinen Erfolg übel,
+    und es hemmt ihre Produktivität.
+  </dt>
+  <dd><p>
+    Benötigen Sie wirklich Arbeiter, die lieber diejenige Person wären die
+    etwas auf die Beine stellt, anstatt es bereits selbst erledigt zu haben?
+    Stolz hat nur wenig Raum am Arbeitsplatz. Wenn sie es nicht hinbekommmen
+    dann geben Sie ihnen etwas das sie schaffen.
+  </p></dd>
+</dl>
+
+<h3><a name="section-3"></a>Abschnitt 3: Anreiz und Reaktion</h3>
+<dl>
+  <dt>
+    <a name="question-3.0"></a>3.0:
+    Mein Hacker hat etwas gut gemacht, und ich möchte ihn belohnen.
+  </dt>
+  <dd>
+    <p>
+      Gut! Hier sind einige der Dinge welche die meisten Hacker im Austausch
+      für ihre Arbeit erhalten möchten:
+    </p>
+    <ol>
+      <li>Respekt.</li>
+      <li>Hochachtung.</li>
+      <li>Lob.</li>
+      <li>Verständnis.</li>
+      <li>Rabatt auf teures Spielzeug.</li>
+      <li>Geld.</li>
+    </ol>
+    <p>
+      Das ist nicht unbedingt die korrekte Reihenfolge. Der 4. Punkt
+      (Verständnis) ist am schwierigsten. Versuchen Sie, sich an die gute
+      Arbeit zu erinnern, die ihr Hacker gerade erledigt hat, wenn Sie das
+      nächste Mal entdecken daß er gerade einen Tag damit verbracht hat X-Trek
+      (Anm. d. Ü.: ein temporeiches Online-Denkspiel, so eine Art
+      Mannschafts-Schnellschach) zu spielen.
+      Anstatt sich darüber auszulassen daß Arbeit getan werden könnte
+      schreiben Sie es als "Vergünstigung" ab, die für eine gut durchgeführte
+      Arbeit (informell) gewährt wurde. Keine Sorge; Hacker sind schnell
+      gelangweilt wenn sie gerade nicht ihrer Arbeit nachgehen.
+    </p>
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-3.1"></a>3.1:
+    Mein Hacker hat etwas schlecht gemacht, und ich möchte ihn bestrafen.
+  </dt>
+  <dd>
+    <p>
+      Machen Sie es nicht. 30 Jahre psychologischer Forschung haben gezeigt
+      daß Bestrafung keine wünschenswerten Langzeiteffekte hat. Ihr Hacker
+      ist keine Laborratte. (Auch <i>wenn</i> er eine Laborratte wäre würde
+      Bestrafung nichts nutzen; zumindest nicht wenn er einer von der Sorte
+      Laborratten wäre an denen die Psychologiestudien durchgeführt wurden.)
+      Wenn Sie etwas, das Ihr Hacker macht, nicht mögen, dann drücken Sie
+      Ihre Besorgnis aus. Erklären Sie was Sie an dem Verhalten stört.
+    </p>
+    <p>
+      Seien Sie auf eine Diskussion vorbereitet; Ihr Hacker ist ein
+      rationales Wesen und hatte vermutlich Gründe. Fahren Sie ihm nicht zu
+      schnell über den Mund; es könnte sich herausstellen daß es gute Gründe
+      sind.
+    </p>
+    <p>
+      Haben Sie keine Angst sich zu entschuldigen wenn Sie falsch liegen.
+      Wenn Ihr Hacker zugibt im Unrecht zu sein dann verlangen Sie keine
+      Entschuldigung; sofern es den Hacker betrifft <i>ist</i> zuzugeben nicht
+      Recht zu haben meist schon eine Entschuldigung.
+    </p>
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-3.2"></a>3.2:
+    Ich kapier's nicht. Ich habe meinem Hacker eine bedeutende Beförderung
+    in Aussicht gestellt, und sie hat abgelehnt und wirkte beleidigt.
+  </dt>
+  <dd><p>
+    Eine Beförderung bringt es häufig mit sich, mehr Zeit damit zu verbringen
+    Leuten zuzuhören wie sie beschreiben was sie tun, und weniger Zeit an
+    Computern zu spielen. Ihr Hacker hat Spaß an ihrer Arbeit; wenn Sie eine
+    Belohnung anbieten möchten, ziehen Sie eine höherwertigere
+    Stellenbezeichnung, eine mögliche Gehaltserhöhung und Komplimente in
+    Betracht. Stellen Sie sicher daß Ihr Hacker weiß daß Sie mit ihren
+    Leistungen zufrieden sind &ndash; dafür ist sie da.
+  </p></dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-3.3"></a>3.3:
+    Meine Unternehmenspolitik läßt keine weiteren Gehaltserhöhungen für
+    meinen Hacker zu bis er im Management ist.
+  </dt>
+  <dd><p>
+    Ihre Unternehmenspolitik ist überholungsbedürftig. Ein Hacker kann bis zu
+    200&nbsp;US$ pro Stunde (machmal auch mehr) als selbständiger Berater
+    verdienen. Sie könnten Ihrem Hacker eine vertragliche, unbefristete
+    Beraterposition mit Zusatzansprüchen anbieten, oder andere Schlupflöcher
+    finden. Oder finden Sie unentgeltliche Zuwendungen die Sie anbieten können
+    - viele Hacker werden gerne Rabatte auf Hardware von ihrem bevorzugten
+    Hersteller als effektive Gehaltserhöhung akzeptieren.
+  </p></dd>
+</dl>
+
+<dl>
+  <dt>
+    <a name="question-3.4"></a>3.4:
+    Ich kann nicht glauben daß der Hacker in meiner Belegschaft so viel
+    wert ist wie wir zahlen.
+  </dt>
+  <dd><p>
+    Fragen Sie das übrige Personal der Abteilung was der Hacker tut, und was
+    sie darüber denken. Möglicherweise verbringt Ihr Hacker ein paar Stunden
+    in der Woche damit, komplizierte Fragen zu beantworten, die anderenfalls
+    einen teuren externen Berater erfordern würden. Ihr Hacker erledigt
+    vielleicht in seiner freien Zeit am Arbeitsplatz Aufgaben, die
+    eine weitere Stelle erfordern würden. Sehr wenige Hacker sind nicht wert
+    was ihnen gezahlt wird; sie genießen die Durchführung schwieriger Aufgaben
+    und die Verbesserung der Arbeitseffizienz.
+  </p></dd>
+</dl>
+
+<h3><a name="section-4"></a>Abschnitt 4: Was bedeutet <i>das</i> denn?</h3>
+<dl>
+  <dt>
+    <a name="question-4.0"></a>4.0:
+    Mein Hacker spricht kein Deutsch. Wenigstens <i>glaube</i> ich das.
+  </dt>
+  <dd>
+    <p>
+      Ihr Hacker ist ein Technikfreak. Ihre beste Möglichkeit ist, eine Kopie
+      des TNHD (<i>The New Hacker's Dictionary</i>) zu besorgen. Es findet sich
+      unter
+      <a href="http://catb.org/esr/jargon/">http://catb.org/esr/jargon</a>
+      (mein letzter Check) oder in einem guten Buchladen (Anm. d. Ü.:
+      In Deutschland derzeit anscheinend nicht verfügbar, eine deutsche
+      Übersetzung ist nicht zu erwarten). Wenn Sie Probleme haben diese
+      Referenz zu verstehen, fragen Sie Ihren Hacker ob sie ein Exemplar hat
+      oder bereit wäre die Begriffe zu erklären. Die meisten Hacker sind
+      willens Fachbegriffe zu erläutern. Seien Sie auf Herablassungen gefaßt;
+      das ist nicht als Beleidigung gedacht, aber wenn Sie die Wörter nicht
+      verstehen <i>muß</i> sie wahrscheinlich vereinfachend mit Ihnen reden um
+      sie zu erklären.
+    </p><p>
+      Es ist eine halbwegs schwierige Menge von Wörtern; es gibt viele davon,
+      und ihre Verwendung ist viel präziser als es sich anhört. Hacker lieben
+      Wortspiele.
+    </p><p>
+      [Es ist auch möglich daß Deutsch nicht die Muttersprache Ihres Hackers
+      ist, und daß es auch nicht Ihre ist. Setzen Sie eine passendere Sprache
+      ein wenn gewünscht.]
+    </p>
+  </dd>
+</dl>
+<dl>
+  <dt>
+    <a name="question-4.1"></a>4.1:
+    Ich kann meinem Hacker keine Schätzung entringen.
+  </dt>
+  <dd>
+    <p>
+      Ihr Hacker hat noch nicht herausgefunden wie schwer das Problem ist.
+      Anders als die meisten Arbeiter werden Hacker standhaft versuchen sich
+      zu weigern eine Schätzung abzugeben bis sie sicher wissen daß sie das
+      Problem verstehen. Das könnte einschließen es gelöst zu haben.
+    </p><p>
+      Kein guter Ingenieur geht unter 95% Gewissheit. Die meisten Hacker
+      sind gute Ingenieure. Wenn Sie sagen sie werden nicht versuchen ihn auf
+      die Schätzung festzunageln (und das auch nicht vorhaben!) ist es viel
+      wahrscheinlicher daß Sie eine annähernde Abschätzung bekommen. Die
+      Schätzung mag sich sehr hoch oder sehr niedrig anhören; sie mag sehr
+      hoch oder sehr niedrig sein. Es ist immer noch eine Schätzung, und Sie
+      bekommen worum Sie gebeten haben.
+    </p>
+  </dd>
+</dl>
+<dl>
+  <dt>
+    <a name="question-4.2"></a>4.2:
+    Mein Hacker macht rätselhafte, bedeutungslose Witze.
+  </dt>
+  <dd><p>
+    Wenn sie sich kühn genug fühlen dann fragen Sie nach einer Erklärung. Die
+    meisten davon können erklärt werden. Es könnte eine Weile dauern, aber es
+    könnte sich als interessant herausstellen.
+  </p></dd>
+</dl>
+<dl>
+  <dt>
+    <a name="question-4.3"></a>4.3:
+    Mein Hacker zählt ab Null.
+  </dt>
+  <dd><p>
+    Wie auch der Computer. Man kann es verbergen, aber Computer zählen ab Null.
+    Die meisten Hacker machen es aus Gewohnheit genauso.
+  </p></dd>
+</dl>
+
+<hr>
+
+<p>
+  Wenn Sie diese Information als nützlich empfunden haben, erwägen Sie bitte
+  ein Zeichen der Anerkennung an den Autor zu senden; mailen Sie für weitere
+  Informationen. Sie könnten auch in Betracht ziehen ein paar Bücher durch
+  meinen "Partnerprogramm"-Link zu kaufen; Sie bekommen starke Bücher, ich
+  bekomme Kleingeld. :)
+</p>
+
+<h4>Epfohlene Bücher:</h4>
+
+<p>
+  Die Links in diesem Abschnitt werden Sie alle zu Powell's führen, wo Sie
+  Ihr Geld für coole Bücher ausgeben können. (Anm. d. Ü.: Die von mir
+  ergänzten Veweise leiten Sie ohne kommerziellen Umweg direkt zu den
+  Webressourcen der Originale.)
+</p><p>
+  <a href="http://www.powells.com/cgi-bin/partner?partner_id=23311&cgi=product&isbn=0596001088">The Cathedral &amp; the Bazaar</a>
+  (<a href="http://www.powells.com/cgi-bin/partner?partner_id=23311&cgi=search/search/&searchtype=kw&searchfor=Raymond%20Eric">Eric
+  Raymond</a>)
+  - eine Diskussion verschiedener Wege, Systeme zu erstellen.<br/>
+  (Anm. d. Ü.: Webseite dieser Schrift unter
+  <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">http://www.catb.org/~esr/writings/cathedral-bazaar/</a>,
+  eine nicht aktualisierte deutsche Übersetzung gibt es hier:
+  <a href="http://www.phone-soft.com/RaymondCathedralBazaar/catb_g.0.html">http://www.phone-soft.com/RaymondCathedralBazaar/catb_g.0.html</a>)
+</p><p>
+  <a href="http://www.powells.com/cgi-bin/partner?partner_id=23311&cgi=product&isbn=0262680920">The
+  New Hacker's Dictionary</a> (<a href="http://www.powells.com/cgi-bin/partner?partner_id=23311&cgi=search/search/&searchtype=kw&searchfor=Raymond%20Eric">Eric
+  Raymond</a>)
+  - eine großartige Quelle für Trivialitäten, Überlieferungen und Übersetzungen
+  für schwierige Konzepte. (Nicht immer lieferbar, fürchte ich.)<br/>
+  (Anm. d. Ü.: Online-Version hier:
+  <a href="http://catb.org/esr/jargon/">http://catb.org/esr/jargon</a>.
+  Die einzelnen Begriffsdefinitionen finden sich im Kapitel
+  <a href="http://www.catb.org/esr/jargon/html/go01.html">II. The Jargon
+  Lexicon: Glossary</a>)
+</p><p>
+</p>
+
+<hr>
+
+<h3>Fußnoten</h3>
+<p>
+  <a name="ref1"></a><a href="#herd">1.</a>
+  Nein, nicht mit einem Laserpointer.
+</p>
+
+</div>
+
+<table width="40%" align="center" summary="Footer"> <!-- Beginn Footer -->
+  <tbody>
+    <tr>
+      <td bgcolor="#607565" align="center"> <font size="2">
+      <font color="#8daa94"> <b>&lt;</b></font> &copy;2005 <a
+  href="mailto:Murphy.Gebert@gmx.de">Martin Gebert</a> <font color="#8daa94"> <b>&gt;</b></font> </font> </td>
+    </tr>
+  </tbody>
+</table> <!-- Ende Footer -->
+
+<center>
+<a href="http://www.catb.org/hacker-emblem/"><img src="http://www.catb.org/hacker-emblem/glider-small.png" alt="Hacker Emblem"/></a>
+<a href="http://jigsaw.w3.org/css-validator/">
+ <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" border="0" />
+</a>
+<a href="http://www.anybrowser.org/campaign/">
+<img src="../pics/w3c_ab.png" alt="Best viewed with any browser." border="0"></img>
+</a>
+<a href="http://www.pgpi.org/download/"><img src="../pics/pgp-now.png" border="0" alt="pgp now"></img></a>
+</center>
+<br/><br/>
+
+</body>
+</html>

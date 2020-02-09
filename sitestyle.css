@@ -1,0 +1,171 @@
+/* I took this file from Eric S. Raymonds homepage.
+ * I changed some colors to fit my homepage design.
+ */
+
+/* Originally cribbed from http://bluerobot.com/web/layouts/layout1.html
+ * However, people who merge the hotlink colors are evil and should be killed,
+ * so I removed that.  Fixing font sizes in pixels is evil, too; is much as
+ * possible I has move all dimensions to be relative to the associated font
+ * size. Finally, light grey is a great background color, but lousy for
+ * foreground text on white.
+ */
+
+/*
+body { 
+      background-attachment: fixed; 
+      background-image: URL(http://pobox.com/~kragen/kjlogobg.png); 
+      background-position: center;
+      background-repeat: no-repeat;
+}
+*/
+
+body {
+	margin:0;
+	padding:0;
+	font-family:verdana, arial, helvetica, sans-serif;
+	color:#ffffff;
+	background-color:#445448;
+}
+
+p {
+	font-family: verdana, arial, helvetica, sans-serif;
+	margin:0 0 1em 0;
+	padding:0;
+	text-align:justify;
+}
+
+span.separator {
+	color:#8daa94;
+}
+
+span.pagetitle
+	{
+		font-size:x-large;
+		font-weight: bold;
+		color:#8daa94;
+	}
+
+span.pagename{font-size:smaller;color:#ffffff;}
+
+span.footer
+	{
+		font-size:normal;
+		color:#ffffff;
+		background-color:#607565;
+		text-align:center;
+		padding: 2px 20px;
+	}
+#Content>p {text-indent:2em; margin:0;}
+#Content>p+p {text-indent:2em;}
+
+h1 {
+    font-size: xx-large;
+    font-weight: bolder;
+    font-stretch: ultra-expanded;
+    margin-bottom: 0.25ex;
+    text-align: center;
+   }
+
+h2 {
+    font-size: large;
+    margin-bottom: 0.25ex;
+   }
+
+h3 {
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 0.25ex;
+    text-align:left;
+   }
+
+h4 {
+    font-size: medium;
+    margin-bottom: 0.25ex;
+    text-align:left;
+   }
+
+h5 {
+    font-size: small;
+    margin-bottom: 0.25ex;
+    text-align:left;
+   }
+
+a {
+	text-decoration:none;
+	font-family:verdana, arial, helvetica, sans-serif;
+	}
+a:hover   {background-color:#607565;text-decoration:underline;}
+/*a:link    {color:#8daa94;}*/
+a:link	  {color: #F5F5DC/*beige*/; text-decoration:underline;}
+a:visited {color:#ffffff;text-decoration:underline;}
+
+#Header {
+	font-weight:600;
+	font-size: x-large;	/* should be same as an h1 header */
+	margin:20px 0 10px 0;
+	padding:0.3ex 0 1.3ex 20px;
+	border-style:solid;
+	border-color:black;
+	border-width:1px 0;
+	background-color:#eee;
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own
+stupidity.  Thanks to Tantek Celik for the hack and to Eric Costello
+for publicizing it.  IE5/Win incorrectly parses the "\"}"" value,
+prematurely closing the style declaration. The incorrect IE5/Win value
+is above, while the correct value is below. See
+http://glish.com/css/hacks.asp for details. */
+
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height:14px; /*1ex+3px;*/ /* UNTESTED!  Was 14px */
+	}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it
+feeds correct length values to user agents that exhibit the parsing
+error exploited above yet get the CSS box model right and understand
+the CSS2 parent-child selector. ALWAYS include a "be nice to Opera 5"
+rule every time you use the Tantek Celik hack (above). */
+body>#Header {height:14px;}
+
+#RSS-Feeds{float:right;}
+
+#Content {
+	/* Left margin is menu width + 3em */
+	margin:0 50px 50px 2em;
+	padding:10px;
+	}
+
+#Menu {
+	position:absolute;
+	top:80px;
+	left:20px;
+	width:8em;
+	padding:0.5em;
+	background-color:#eee;
+	border:1px dashed #999;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:8em;
+	}
+/* Again, "be nice to Opera 5". */
+body>#Menu {width:8em;}
+
+/* For convenience */
+.centered {
+	   text-align: center;
+	   margin-left: auto;
+	   margin-right: auto;
+	  }
+
+.notebox {
+	  background-color:#eee;
+	  border:1px dashed #999;
+	  margin: 15px;
+	  font-size:small;
+	  text-indent: 0;
+	 }
+
+.mediaobject {
+	      text-align: center;
+	     }

@@ -1,0 +1,8 @@
+TITLE: Softwareliste
+AUTHOR: Sven Bergner
+DATE: Mittwoch, den 15.10. 2003 um 21:38 Uhr
+-----
+BODY:
+<p>Auf der FAQ-Seite habe ich eine Softwareliste begonnen und die Linkseite wurde aktualisiert.<br/>
+</p>
+END-----

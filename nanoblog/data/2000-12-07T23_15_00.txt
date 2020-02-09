@@ -1,0 +1,7 @@
+TITLE: Redesign
+AUTHOR: Sven Bergner
+DATE: Donnerstag, den 07.12.2000 um 23:15  Uhr
+-----
+BODY:
+<p>Today I redesigned the whole <a href="http://www.LinuxTaskForce.de">www.LinuxTaskForce.de</a> page!</p>
+END-----

@@ -1,0 +1,9 @@
+TITLE: Seitenleiste erweitert
+AUTHOR: Sven Bergner
+DATE: Montag, den 16. Februar 2004 um 17:51
+-----
+BODY:
+<p>Endlich habe ich es geschafft, dass das Stimmungs-Smilie mit angezeigt wird. 
+Bei dieser Gelegenheit habe ich gleich noch das Fortunes- und Validierungs-Plugin eingebaut.
+Seit heute benutzte ich die neue Version 2.7 von Nanoblogger.</p>
+END-----

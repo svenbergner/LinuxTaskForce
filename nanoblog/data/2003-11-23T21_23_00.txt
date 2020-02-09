@@ -1,0 +1,19 @@
+TITLE: Fortschritte bei der &Uuml;bersetzung des Hacker-Howto
+AUTHOR: Sven Bergner
+DATE: Sonntag, den 23.11.2003 um 21:23 Uhr
+-----
+BODY:
+<p>    Die &Uuml;bersetzung des Hacker-Howto schreitet voran. Ich hoffe,
+    dass ich noch vor Weihnachten die &Uuml;bersetzung komplett
+    aktualisiert habe. Ich werde dann mit Hilfe eines Cronjobs die
+    &Auml;nderungen der Originalseite &uuml;berwachen und
+    nachziehen. Erfahrungsgem&auml;&szlig; &auml;ndert sich die Seite eher
+    selten, deshalb wollte ich den &Uuml;berpr&uuml;fungszeitraum auf
+    eine Woche einstellen.<br/>
+    Ich habe damit begonnen die englische &Uuml;bersetzung
+    vorzubereiten. Das Ergebnis wird aber sicherlich noch einige Zeit
+    auf sich warten lassen. Die ersten Seiten werden die Projekt, FAQs
+    und die Links sein. Die ausf&uuml;hrlichen News gibt es sicherlich
+    weiterhin nur in deutsch.
+</p>
+END-----

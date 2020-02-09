@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="$BLOG_CHARSET"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="$BLOG_MIMETYPE; charset=$BLOG_CHARSET" />
+<meta name="generator" content="NanoBlogger $VERSION" />
+
+<title>$BLOG_TITLE: $NB_MetaTitle</title>
+
+<link rel="stylesheet" href="${BASE_URL}$BLOG_CSS" type="text/css" />
+<link rel="shortcut icon" href="${BASE_URL}$BLOG_ICON" />
+
+</head>
+
+<body>
+
+<div id="banner">
+	<h1><a href="${BASE_URL}$NB_INDEX" accesskey="1">$BLOG_TITLE</a></h1>
+	<span class="description">$BLOG_DESCRIPTION</span>
+</div>
+<div id="container">
+	<a id="top"></a>
+	<div class="blog">
+		<div id="menu">
+$([ ! -z "$prev_year" ] && echo '<a href="'${ARCHIVES_PATH}$NB_PrevArchiveYearLink'">'$NB_PrevPage'</a>')
+			<a href="${BASE_URL}$NB_INDEX">Main</a>
+$([ ! -z "$next_year" ] && echo '<a href="'${ARCHIVES_PATH}$NB_NextArchiveYearLink'">'$NB_NextPage'</a>')
+		</div>
+		<h2 class="pagetitle">$NB_MetaTitle</h2>
+		<div class="blogbody">
+			$NB_MetaBody
+		</div>
+		<!--
+		<div class="menu">
+			<a href="#top">$NB_TopPage</a>
+		</div>
+		-->
+	</div>
+</div>
+
+</body>
+</html>
+

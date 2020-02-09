@@ -1,0 +1,235 @@
+#!/bin/sh
+
+## Script to compile KDE ver. 1.0pre
+## (C) 2001 Sven Bergner <bergner@linuxtaskforce.de>
+
+#setting environment variable
+KDEDIR=/opt/kde3
+QTDIR=/usr/lib/qt3
+export KDEDIR QTDIR
+
+export CXXFLAGS="-O2 -march=i586 -mcpu=i686"   
+export CFLAGS="-O2 -march=i586 -mcpu=i686"      
+
+#Names of packages which will be used
+
+PACKAGES="kde-common kdesupport arts kdelibs kdebase kdeartwork kdeadmin 
+	  kdegraphics kdemultimedia kdenetwork kdeutils quanta kdeaddons
+	  kdevelop kdepim koffice kdeextragear-1 kdetoys kdoc 
+	  kdesdk kdeedu kdegames"
+# kdenonbeta 
+
+export WorkDir=$PWD
+#Cleanup section
+
+function cleanup()
+{
+    for i in $PACKAGES
+    do
+	echo "cleaning $i"
+	cd $i
+	make -f admin/Makefile.common cvs-clean
+	cd ..
+    done
+}
+
+function get_packages()
+{
+    for i in $PACKAGES
+    do
+	echo "updateing $i"
+	cd $i
+	cvs update
+	cd $WorkDir
+	cd kde-i18n/de
+	cvs update
+	cd $WorkDir
+    done
+}
+
+function remove_build_marks()
+{
+    rm .k* &> /dev/null
+    rm .a* &> /dev/null
+    rm error-* &> /dev/null
+    rm buildlog-* &> /dev/null
+    rm Build* &> /dev/null
+    touch .kde-common-build
+}
+
+function printMakeError()
+{
+    echo -e "\007error while make in $package!!!";
+    touch $WorkDir/error-$package;
+    cd $WorkDir;
+}
+
+function printMakeInstallError()
+{
+    echo -e "\007error while make install in $package!!!";
+    touch $WorkDir/error-$package;
+    cd $WorkDir;
+}
+
+function printConfigureError()
+{
+    echo -e "\007error while configure in $package!!!";
+    touch $WorkDir/error-$package;
+    cd $WorkDir;
+}
+
+function printMakefilecvsError()
+{
+    echo -e "\007error while make -f Makefile.cvs in $package!!!";
+    touch $WorkDir/error-$package;
+    cd $WorkDir;
+}
+
+function make_packages()
+{
+    #touch start time
+    touch "Build Started `date`"
+
+    for package in $PACKAGES
+    do
+	if test -e .$package-build 
+	    then continue 
+	fi
+	echo -e "\007Start compiling $package."
+	cd $package                                   || continue
+	make                 &> ../buildlog-$package  || { printMakeError; continue ; }
+	sudo make install    &> ../buildlog-$package  || { printMakeInstallError; continue ; }
+	cd $WorkDir
+	touch ready-$package
+	touch .$package-build
+	rm buildlog-$package
+	echo -e "\007$package succesfully compiled and installed."
+    done
+	
+    echo -e "\007*** Buildprocess finished. ***"
+
+    #touch end time
+    touch "Build finished `date`"
+}
+
+function build_packages()
+{
+    #touch start date
+    touch "Build Started `date`"
+
+    #process packages
+    for package in $PACKAGES
+    do
+	if test -e .$package-build 
+	    then continue 
+	fi
+	    echo -e "\007Start compiling $package."
+	    cd $package                                   || continue 
+	    make -f Makefile.cvs &> ../buildlog-$package  || { printMakefilecvsError; continue ; }
+	    ./configure          &> ../buildlog-$package  || { printConfigureError; continue ; }
+	    make                 &> ../buildlog-$package  || { printMakeError; continue ; }
+	    sudo make install    &> ../buildlog-$package  || { printMakeInstallError; continue ; }
+	    cd $WorkDir
+	    touch ready-$package
+	    touch .$package-build
+	    rm buildlog-$package
+	    echo -e "\007$package succesfully compiled and installed."
+    done
+
+    echo -e "\007*** Buildprocess finished. ***"
+
+    #touch end time
+    touch "Build finished `date`"
+}
+
+function configure_packages()
+{
+    #touch start date
+    touch "configure Started `date`"
+
+    #process packages
+    for package in $PACKAGES
+    do
+	if test -e .$package-build 
+	    then continue 
+	fi
+	    echo -e "\007Start configure $package."
+	    cd $package                                   || continue
+ 
+	    rm config.cache      &> ../buildlog-$package
+	    make -f Makefile.cvs &> ../buildlog-$package  || { printMakefilecvsError; continue ; }
+	    ./configure          &> ../buildlog-$package  || { printConfigureError; continue ; }
+ 	    cd $WorkDir
+	    echo -e "\007$package succesfully configured."
+    done
+
+    echo -e "\007*** Configureprocess finished. ***"
+
+    #touch end time
+    touch "Configure finished `date`"
+}
+
+case $1 in
+    update )
+	get_packages
+	exit
+	;;
+
+    make )
+	make_packages
+	exit
+	;;
+
+    make-all )
+	remove_build_marks	
+	make_packages
+	exit
+	;;
+
+    configure )
+	configure_packages
+	exit
+	;;
+
+    configure-all )
+	remove_build_marks	
+	configure_packages
+	exit
+	;;
+
+    rebuild )
+	build_packages
+	;;
+
+    rebuild-all )
+	echo "Cleaning all packages and rebuild all."
+	remove_build_marks
+	build_packages
+	echo "Cleaning finished."
+	exit
+	;;
+
+    cleanup )
+	echo "Cleaning all packages."
+	cleanup
+	echo "Cleaning finished."
+	exit
+	;;
+
+    help | ? )
+	echo "Usage: build-kde2 [option]"
+	echo "Options:"
+	echo -e "  help\t\tThis help text."
+	echo -e "  configure\tRuns configure in all not build packages."
+	echo -e "  configure-all\tRuns configure on all packages."
+	echo -e "  make\t\tRuns make in all not build packages."
+	echo -e "  make-all\tRuns make in all packages."
+	echo -e "  rebuild\tRebuilds only not build packages."
+	echo -e "  rebuild-all\tRebuild all packages."
+	echo -e "  cleanup\tCleanup all packages without rebuild."
+#	echo -e "  quiet\tEvery option will be done without any output to stdout."
+	exit
+	;;
+esac
+
+#########################################################################

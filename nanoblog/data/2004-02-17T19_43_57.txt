@@ -1,0 +1,17 @@
+TITLE: Debian Pakete selber bauen
+AUTHOR: Sven Bergner
+DATE: Dienstag, den 17. Februar 2004 um 19:43
+-----
+BODY:
+<p>Ich habe mich gestern mal etwas ausf&uuml;hrlicher mit dem Thema
+Debiab-Pakete bauen besch&auml;ftigt und versucht ein Paket zu bauen, 
+dass von lintian nicht mehr angemeckert wird.
+Das ist gar nicht so einfach wie ich dachte. ;-)<br/>
+Auf der anderen Seite war ich doch angenehm &uuml;berascht, wie
+gut die Hinweise sind, die einem lintian liefert.<br/>
+Ich werde heute abend meine Tests fortsetzten. Mal sehen, 
+ob ich es nicht doch schaffe ein komplett lintian-konformes 
+Paket zu bauen.<br/>
+Wenn der Autor nichts dagegen hat werde ich es auf meiner Seite
+ver&ouml;ffentlichen.<br/></p>
+END-----

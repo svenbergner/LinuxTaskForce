@@ -1,0 +1,5 @@
+$path = "./";
+$pw_path = "./rb-pwd/";
+$url = "http://www.linuxtaskforce.de/cgi-bin/reblogger/";
+$sendmail = "/usr/sbin/sendmail";
+1;

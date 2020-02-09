@@ -1,0 +1,11 @@
+TITLE: Er geht wieder
+AUTHOR: Sven Bergner
+DATE: Dienstag, den 26. April 2005 um 11:22
+DESC: Er geht wieder!!!
+-----
+BODY:
+Es geschehen noch Zeichen und Wunder. Ein einziger falsch gesetzter
+symbolischer Link hat ausgereicht, dass der Blog nicht mehr richtig
+generiert wurde. Jetzt sieht alles wieder so aus wie es soll. Dann kann
+ich jetzt auch wieder fröhlich bloggen :-)
+END-----

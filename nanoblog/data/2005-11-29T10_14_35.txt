@@ -1,0 +1,12 @@
+TITLE: Neue Blog-URL
+AUTHOR: Sven Bergner
+DATE: Dienstag, den 29. November 2005 um 10:14
+DESC: Neue Blog-URL
+FORMAT: raw
+-----
+BODY:
+Gestern fiel mir wieder ein, dass ich 100 Subdomains vergeben
+kann. Daraufhin dachte ich mir, dann vergebe ich eine Subdomain für
+meinen Blog. Die Adresse lautet <a
+href="http://blog.linuxtaskforce.de">http://blog.linuxtaskforce.de</a>.
+END-----

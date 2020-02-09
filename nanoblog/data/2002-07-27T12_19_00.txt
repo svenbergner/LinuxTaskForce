@@ -1,0 +1,12 @@
+TITLE: Ab jetzt in Deutsch
+AUTHOR: Sven Bergner
+DATE: Samstag, den 27.07.2002 um 12:09  Uhr
+-----
+BODY:
+<p>   Ich habe mich dazu entschlossen, diese Seite in Zukunft nur noch auf
+   deutsch zu f&uuml;hren, da ich sonst gar nicht dazu komme
+   irgendetwas hier zu ver&ouml;ffentlichen und das finde ich eigentlich schade.<br/>
+   Ich m&ouml;chte auf dieser Seite Hinweise auf n&uuml;tzliche und
+   interessante Linuxprogramme geben, die ich selbst gerne benutze.
+</p>
+END-----

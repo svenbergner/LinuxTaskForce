@@ -1,0 +1,15 @@
+TITLE: Wie wird man ein Hacker
+AUTHOR: Sven Bergner
+DATE: Sonntag, den 02.11.2003 um 21:17 Uhr
+-----
+BODY:
+<p>Ich habe die Pflege der deutschen &Uuml;bersetzung des Hacker Howto
+von Eric S. Raymond &uuml;bernommen.
+Zur Zeit bin ich dabei das Dokument komplett zu &uuml;berarbeiten.
+Ich m&ouml;chte es zum Einen auf die neue deutsche Rechtschreibung
+umschreiben und zum Anderen auf den neusten Stand bringen.
+Die Original&uuml;bersetzung befindet sich im Moment auf dem Stand von
+1998.
+Sobald es fertig ist, werde ich es auf meiner Webseite zur
+Verf&uuml;gung stellen. Das kann aber noch ein paar Tage dauern.</p>
+END-----

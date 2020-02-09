@@ -1,0 +1,10 @@
+TITLE: Hacker-Emblem eingefügt
+AUTHOR: Sven Bergner
+DATE: Donnerstag, den 30.10.2003 um 13:13 Uhr
+-----
+BODY:
+<p>    Eric S. Raymond hat ein Hacker Emblem erfunden und das habe ich
+    gleich auf meine Seite in den Footer eingebaut. Wer n&auml;heres
+    dar&uuml;ber wissen m&ouml;chte kann <a href="http://www.catb.org/~esr/hacker-emblem/">hier</a> mehr erfahren.
+</p>
+END-----

@@ -1,0 +1,120 @@
+#!/bin/sh
+
+## Script to compile KDE ver. 0.5
+## (C) 2000 Sven Bergner <bergner@linuxtaskforce.de>
+
+#setting environment variable
+KDEDIR=/opt/kde2-cvs
+QTDIR=/usr/lib/qt2
+export KDEDIR QTDIR
+
+#Names of packages which will be used
+
+PACKAGES="kdesupport kdelibs kdebase
+          kdeadmin kdegames kdegraphics kdemultimedia kdenetwork kdeutils
+	  kdepim koffice kdetoys kdoc kdesdk kde-i18n kdebindings"
+
+#Cleanup section
+
+function cleanup()
+{
+    find . -name .deps        -print | xargs rm -rf
+    find . -name .libs        -print | xargs rm -rf
+    find . -name *.o          -print | xargs rm -f
+    find . -name *.lo         -print | xargs rm -f
+    find . -name *.moc        -print | xargs rm -f
+    find . -name *.moc.cpp    -print | xargs rm -f
+    find . -name *~           -print | xargs rm -f
+    find . -name config.cache        | xargs rm -f
+}
+
+case $1 in
+    all )
+	rm .k* &> /dev/null
+	rm error-* &> /dev/null
+	rm buildlog-* &> /dev/null
+	rm Build* &> /dev/null
+	;;
+
+    new-qt )
+	echo "Cleaning all packages and rebuild all."
+	rm .k* &> /dev/null
+	rm error-* &> /dev/null
+	rm buildlog-* &> /dev/null
+	rm Build* &> /dev/null
+	cleanup 
+	echo "Cleaning finished."
+	;;
+
+    cleanup )
+	echo "Cleaning all packages."
+	cleanup
+	echo "Cleaning finished."
+	exit
+	;;
+
+    help | ? )
+	echo "Usage: build-kde2 [option] [quiet]"
+	echo "Options:"
+	echo -e "  help\t\tThis help text."
+	echo -e "  all\t\tRuns make in all packages."
+	echo -e "  new-qt\tCleanup all packages and then rebuild all."
+	echo -e "  cleanup\tCleanup all packeges without rebuild."
+#	echo -e "  quiet\tEvery option will be done without any output to the stdout."
+	exit
+	;;
+esac
+
+#########################################################################
+
+#touch start date
+touch "Build Started `date`"
+
+#process packages
+for package in $PACKAGES
+do
+    if test -e .$package-build 
+	then continue 
+    fi
+	echo -e "\007Start compiling $package."
+        cd $package                                   || continue
+ 
+	make -f Makefile.cvs &> ../buildlog-$package  || { echo -e "\007error while make -f Makefile.cvs in $package!!!" ; touch ../error-$package ; cd .. ; continue ; }
+        ./configure          &> ../buildlog-$package  || { echo -e "\007error while ./configure in $package!!!" ; touch ../error-$package ; cd .. ; continue ; }
+        make                 &> ../buildlog-$package  || { echo -e "\007error while make in $package!!!" ; touch ../error-$package ; cd .. ; continue ; }
+        sudo make install    &> ../buildlog-$package  || { echo -e "\007error while sudo make install in $package!!!" ; touch ../error-$package ; cd .. ; continue ; }
+        cd ..
+	touch ready-$package
+	touch .$package-build
+	rm buildlog-$package
+        echo -e "\007$package succesfully compiled and installed."
+done
+
+#extra part to compile kdevelop 1.x
+#it is needed as long as kdevelop 1.x is based on qt1.45
+cd kdevelop
+echo -e "\007Start compiling kdevelop."
+export QTDIR=/usr/lib/qt
+export KDEDIR=/opt/kde
+    make -f Makefile.cvs &> ../buildlog-kdevelop || { echo -e "\007error while make -f Makefile.cvs in kdevelop!!!" ; touch ../error-kdevelop ; exit ; }
+    ./configure          &> ../buildlog-kdevelop || { echo -e "\007error while ./configure kdevelop!!!" ; touch ../error-kdevelop ; exit ; }
+    make                 &> ../buildlog-kdevelop || { echo -e "\007error while makeing kdevelop!!!" ; touch ../error-kdevelop ; exit ; }
+    sudo make install    &> ../buildlog-kdevelop || { echo -e "\007error while installing kdevelop!!!" ; touch ../error-kdevelop ; exit ; }
+cd ..
+rm buildlog-kdevelop
+touch .kdevelop-build
+touch ready-kdevelop
+
+echo -e "\007KDevelop succesfully compiled and installed."
+#end of extra part
+#this whole section can be erased after porting kdevelop 1.x to qt2
+
+export QTDIR=/usr/lib/qt2
+export KDEDIR=/opt/kde2
+
+sudo cp /opt/kde2-SuSE/bin/startkde /opt/kde2-cvs/bin
+
+echo -e "\007*** Buildprocess finished. ***"
+
+#touch end time
+touch "Build finished `date`"

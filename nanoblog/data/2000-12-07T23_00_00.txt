@@ -1,0 +1,9 @@
+TITLE: Source of pagedesign
+AUTHOR: Sven Bergner
+DATE: Donnerstag, den 07.12.2000 um 23:00 Uhr
+-----
+BODY:
+<p>    I used a template from oswd. You don't have time to open up vi and
+    code your site? Take a look at <a href="http://oswd.org">oswd</a>!
+    They have very cool open source-open use-open everything sites...</p>
+END-----

@@ -1,0 +1,33 @@
+TITLE: "Vista" ist auch keine Chance für Linux
+AUTHOR: Sven Bergner
+DATE: Dienstag, den 17. Januar 2006 um 15:10
+DESC: Keine Chance durch Vista
+FORMAT: markdown
+-----
+BODY:
+<p>
+In einem <a
+href="http://www.pro-linux.de/edit/jan2006.html" target ="_top">Editorial</a> auf der
+Linux-News Seite <a href="http://www.pro-linux.de/"
+target="_top">Pro-Linux</a> schreibt <a
+href="mailto:weltqgel@gmx.de">Benjamin Quest</a> über die Chancen von
+Linux durch die Einführung von Windows Vista.
+</p>
+<p>
+Ähnliche Gedanken hatte ich auch schon bei der Einführung von Windows XP
+und die Realität zeigt uns, dass es zu keinem Nennenswerten
+Anstieg der Verbreitung von Linux durch die Einführung von XP gab.
+</p>
+<p>
+Ich habe auch nie verstanden, warum Leute ein riesiges Problem damit
+haben sich an eine neue Software zu gewöhnen, wenn sie auch gleichzeitig
+einen anderen Namen trägt. z.B. wenn man versucht jemandem die
+Verwendung von OpenOffice schmackhaft zu machen gibt es jede Menge
+Leute, die OpenOffice ständig mit ihrem bisherigen Office vergleichen
+und sich über jeden geänderten Menupunkt oder jedes anders aussehende
+Icon beschweren. Wenn Microsoft allerdings von einer Version zur
+nächsten das komplette Verhalten auf den Kopf stellt, wird das
+komischerweise von den meisten kommentarlos hingenommen. Und genauso
+wird es auch mit Windows Vista&reg; laufen.
+</p>
+END-----

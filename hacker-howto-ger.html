@@ -1,0 +1,2243 @@
+<!-- Design by Leandro Pereira Copyleft (c) 2000 < leandro@linuxmag.com.br > -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//DE" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>LinuxTaskForce: How To Become A Hacker (German Translation)</title>
+  <link rev="made" href="mailto:bergner@linuxtaskforce.de"></link>
+  <link rel="stylesheet" href="../sitestyle.css" type="text/css"></link>
+  <meta name="description" content="Deutsche Übersetzung von How To Become A Hacker"></meta>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+  <meta name="description" CONTENT = "Wie werde ich ein Hacker, How
+ to become a Hacker, written by Eric S. Raymond and translated into
+ german by Christopher Özbek. Now maintained and updated by Sven Bergner."/>
+  <meta name="keywords" content="Hacker, how-to, german"/>
+  <meta name="author" content="Sven Bergner, Christopher Özbek, Eric S. Raymond"/>
+  <meta name="last-update" content="10.09.2009"/>
+</head>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">_uacct = "UA-1821768-1";urchinTracker();</script>
+
+<body>
+
+<center>
+  <h1>Linux Task Force</h1>
+</center> <!-- Ende Kopfteil -->
+
+<table align="center" summary="Menuleiste">
+ <tbody>
+  <tr>
+    <td bgcolor="#607565" align="center">
+    <font color="#8daa94"><b>&lt;</b></font> <a href="../index.html">Index</a> 
+<!--    <font color="#8daa94">/</font> <a href="../neuigkeiten.html">Neuigkeiten</a>-->
+    <font color="#8daa94">/</font> <a href="../nanoblog/index.html">Tagebuch</a>
+    <font color="#8daa94">/</font> <a href="../projekte.html">Projekte</a>
+    <font color="#8daa94">/</font> <a href="../howtos/faqhowto.html"><b>FAQ's &amp; HowTo's</b></a>
+    <font color="#8daa94">/</font> <a href="../uebermich.html"><b>Über mich</b></a>
+<!--    <font color="#8daa94">/</font> <a href="../gedanken.html">Gedanken &amp; Ideen</a> -->
+    <font color="#8daa94">/</font> <a href="../links.html">Links</a>
+    <a href="impressum.html" title="Impressum">Impressum</a> <span class="separator">/</span>
+    <font color="#8daa94"><b>&gt;</b></font>
+    </td>
+   </tr>
+  </tbody>
+</table> <!-- Ende Menu -->
+
+<div id="Content">
+<a href="#german_translation">Direkt zur deutschen Übersetzung.</a>
+  <h2>
+   This is the german translation of the original english text<br/>
+   <a href="http://www.catb.org/~esr/faqs/hacker-howto.html">
+   How To Become A Hacker</a><br/>by Eric Steven Raymond.<br/>
+          Copyright &copy; 2001 Eric S. Raymond<br/>
+   You can reach him using the following adresses:<br/>
+              <span class="orgname"><a href="http://catb.org/~esr/" target="_top">Thyrsus Enterprises</a><br/>
+              </span>
+                <tt>&lt;<a href="mailto:esr@thyrsus.com">esr@thyrsus.com</a>&gt;</tt>
+	    <br/>
+   The original translation was done by <a
+   href="mailto:oezi@oezi.de">Christopher Özbek</a>.<br/>
+   All updates and translations of new parts of the document are done
+   by <a href="mailto:bergner@linuxtaskforce.de">Sven Bergner</a>.
+  </h2>
+  <div>
+        <p>Numerous translations of this document are available:<br/>
+	<a href="http://www.slashproc.net/doc/howto-ar.html" target="_top">Arabic</a>,
+	<a href="http://www.bgit.net/?id=9894" target="_top">Bulgarian</a>, 
+	<a href="http://arfues.net/traduccions/hacker-howto/hacker-howto.html" target="_top">Catalan</a>, 
+	<a href="http://www.angelfire.com/ok/leekawo/hackersim.htm" target="_top">Chinese (Simplified)</a>, 
+	<a href="http://www.olemichaelsen.dk/hacker-howto.html" target="_top">Danish</a>, 
+	<a href="http://www.knudde.be/index.php?page_name=hacker_howto"	target="_top">Dutch</a>, 
+	<a href="http://www,kakupesa.net/hacker/" target="_top">Estonia</a>,
+	<a href="http://meisam.mstg.org/trans/htbh.htm" target="_top">Farsi</a>,
+	<a href="http://hack.fi/hacker-howto-fi.php" target="_top">Finnish</a>,
+	<a href="http://www.linuxtaskforce.de/hacker-howto-ger.html" target="_top">German</a>, 
+	<a href="http://users.otenet.gr/~indy90/hacker-howto-gr/" target="_top">Greek</a>,
+	<a href="http://www.rootshell.be/~eg/faqs/hacker-howto.heb.html" target="_top">Hebrew</a>, 
+	<a href="http://www.saltatempo.org/hacker/hacker.php" target="_top">Italian</a>,
+	<a href="http://webagora.idd.tamabi.ac.jp/wiki/index.php?cmd=read&amp;page=HowToBecomeAHacker" target="_top">Japanese</a>, 
+	<a href="http://stian.atlantiscrew.net/doc/hacker-howto.html" target="_top">Norwegian</a>,
+	<a href="http://tpk.f2o.org/hacker-howto.html" target="_top">Polish</a>, 
+	<a href="http://jvdm.freeshell.org/pt/raquer-howto/" target="_top">Portuguese (Brazilian)</a>,
+	<a href="http://garaj.xhost.ro/hacker-howto/hacker-howto.ro.htm" target="_top">Romanian</a>,
+	<a href="http://lafox.net/docs/Hacker-HOWTO.html" target="_top">Russian</a>,
+	<a href="http://www.sindominio.net/biblioweb/telematica/hacker-como.html" target="_top">Spanish</a>,
+	<a href="http://www.belgeler.org/howto/hacker-howto/hacker-howto.html" target="_top">Turkish</a>, and
+	<a href="http://www1.tripnet.se/~mly/open/faqs/hacker-howto.se.html" target="_top">Swedish</a>. 
+	<br/>
+	Note that since this document changes occasionally,
+        they may be out of date to varying degrees.</p>
+  </div>
+ <hr size=4 width="90%" />
+
+          <div class="revhistory">
+            <table border="1" width="100%" summary="Revision history">
+              <tr>
+                <th align="left" valign="top" colspan="3"><b>Revision History</b></th>
+              </tr>
+	      <tr>
+	        <td align="left">Revision 1.38</td>
+		<td align="left">8 Jan 2008</td>
+		<td align="left">esr</td>
+	      </tr>
+	      <tr>
+	        <td align="left" colspan="3">
+		Deprecate Java as a language to learn early.
+		</td>
+	      </tr>
+	      <tr>
+	        <td align="left">Revision 1.37</td>
+		<td align="left">4 Oct 2007</td>
+		<td align="left">esr</td>
+	      </tr>
+	      <tr>
+	        <td align="left" colspan="3">
+		Recommend Ubuntu as a Unix distro for newbies.
+		</td>
+	      </tr>
+	      <tr>
+	        <td align="left">Revision 1.36</td>
+		<td align="left">21 Mar 2007</td>
+		<td align="left">esr</td>
+	      </tr>
+	      <tr>
+	        <td align="left" colspan="3">
+		Add note about live CDs, and ten years to mastery.
+		</td>
+	      </tr>
+	      <tr>
+	        <td align="left">Revision 1.35</td>
+		<td align="left">03 Aug 2006</td>
+		<td align="left">esr</td>
+	      </tr>
+	      <tr>
+	        <td align="left" colspan="3">
+		Minor fixes.
+		</td>
+	      </tr>
+	      <tr>
+	        <td align="left">Revision 1.34</td>
+		<td align="left">07 Mar 2006</td>
+		<td align="left">esr</td>
+	      </tr>
+	      <tr>
+	        <td align="left" colspan="3">
+                 Remove C# from the list of languages to be avoided now that
+		 Mono is out of beta. 
+		</td>
+	      </tr>
+	      <tr>
+	        <td align="left">Revision 1.33</td>
+		<td align="left">29 Nov 2005</td>
+		<td align="left">esr</td>
+	      </tr>
+	      <tr>
+	        <td align="left" colspan="3">
+		         Add a pointer to Peter Norvig's excellent essay.
+		</td>
+	      </tr>
+	      <tr>
+	        <td align="left">Revision 1.32</td>
+		<td align="left">29 Jun 2005</td>
+		<td align="left">esr</td>
+	      </tr>
+	      <tr>
+	        <td align="left" colspan="3">
+		         Substantial new material on not solving problems twice.
+			 Answer	a FAQ on hacking and open-source programming.
+			 The three questions that reveal if you are already a hacker.
+		</td>
+	      </tr>
+	      <tr>
+	        <td align="left">Revision 1.31</td>
+		<td align="left">22 Mar 2005</td>
+		<td align="left">esr</td>
+	      </tr>
+	      <tr>	      
+              <td align="left" colspan="3"> Added a link to another
+              Paul Graham essay, and advice on how to pick a first
+              project. More translation-link updates.</td>
+	      </tr>
+	      <tr>
+	        <td align="left">Revision 1.30</td>
+		<td align="left">2 Mar 2005</td>
+		<td align="left">esr</td>
+	      </tr>
+	      <tr>	      
+	        <td align="left" colspan="3"> Added and updated many translation links.</td>
+	      </tr>
+	      <tr>
+	        <td align="left">Revision 1.29</td>
+		<td align="left">27 Nov 2004</td>
+		<td align="left">esr</td>
+	      </tr>
+	      <tr>	      
+	        <td align="left" colspan="3">Add Catalan translation.</td>
+	      </tr>
+<tr>
+  <td align="left">Revision 1.28</td>
+  <td align="left">19 Nov 2004</td>
+  <td align="left">esr</td>
+</tr>
+<tr>
+  <td align="left" colspan="3">	Recommend Raymond Smullyan.  Added a
+  caution about Java. More about martial arts and meditation
+  disciplines.</td>
+</tr>
+<tr>
+  <td align="left">Revision 1.27</td>
+  <td align="left">28 Oct 2004</td>
+  <td align="left">esr</td>
+</tr>
+<tr>
+  <td align="left" colspan="3">More on mathematics and hacking skill.</td>
+</tr>
+<tr>
+  <td align="left">Revision 1.26</td>
+  <td align="left">29 Jul 2004</td>
+  <td align="left">esr</td>
+</tr>
+<tr>
+  <td align="left" colspan="3">Add a link to Paul Graham's essay on Great Hackers.</td>
+</tr>
+
+              <tr>
+                <td align="left">Revision 1.24</td>
+                <td align="left">20 Jan 2004</td>
+                <td align="left">esr</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="3"> Belatedly take notice,
+                in the first paragraph, that this document has become
+                authoritative for a lot of people.</td>
+              </tr>
+            </table>
+          </div>
+ <hr size=4 width="90%" />
+      <div class="toc">
+        <p><b>Inhaltsverzeichnis</b></p>
+
+        <dl>
+          <dt><a href="#german_translation">Anmerkungen zur Deutschen Übersetzung</a></dt>
+          <dt><a href="#why_this">Warum dieses Dokument?</a></dt>
+          <dt><a href="#what_is">Was ist ein Hacker?</a></dt>
+          <dt><a href="#attitude">Die Hacker-Einstellung</a></dt>
+          <dd>
+            <dl>
+              <dt><a href="#believe1">1. Die Welt ist voll von faszinierenden Problemen, die alle nur darauf warten, gelöst zu werden.</a></dt>
+              <dt><a href="#believe2">2. Kein Problem sollte jemals zweimal gelöst werden müssen.</a></dt>
+              <dt><a href="#believe3">3. Langeweile und Schufterei sind schlecht.</a></dt>
+              <dt><a href="#believe4">4. Freiheit ist gut.</a></dt>
+              <dt><a href="#believe5">5. Die innere Einstellung ist kein Ersatz für Kompetenz.</a></dt>
+            </dl>
+          </dd>
+          <dt><a href="#basic_skills">Grundlegende Hacker-Fähigkeiten</a></dt>
+          <dd>
+            <dl>
+              <dt><a href="#skills1">1. Lerne wie man programmiert.</a></dt>
+              <dt><a href="#skills2">2. Hol Dir eines der OpenSource UNIXe und lerne wie man es benutzt und betreibt.</a></dt>
+              <dt><a href="#skills3">3. Lerne das Web zu benutzen und HTML-Code zu schreiben.</a></dt>
+              <dt><a href="#skills4">4. Wenn Du keine brauchbaren Englischkenntnisse hast, dann erwirb sie.</a></dt>
+            </dl>
+          </dd>
+          <dt><a href="#status">Status in der Hacker-Gemeinschaft</a></dt>
+          <dd>
+            <dl>
+              <dt><a href="#respect1">1. Schreibe Open-Source Software, die jeder frei benutzen kann.</a></dt>
+              <dt><a href="#respect2">2. Hilf mit, freie Software zu testen und Fehler zu finden</a></dt>
+              <dt><a href="#respect3">3. Veröffentliche nützliche Informationen</a></dt>
+              <dt><a href="#respect4">4. Hilf mit die Infrastruktur am Leben zu halten</a></dt>
+              <dt><a href="#respect5">5. Hilf der Hacker-Kultur</a></dt>
+            </dl>
+          </dd>
+          <dt><a href="#nerd_connection">Die Hacker/Nerd-Verbindung</a></dt>
+          <dt><a href="#style">Punkte zur Verbesserung deines Stils</a></dt>
+          <dt><a href="#resources">Andere Quellen</a></dt>
+          <dt><a href="#FAQ">Häufig gestellte Fragen</a></dt>
+        </dl>
+      </div>
+
+      <br/>
+      <div class="mediaobject">
+        <img src="../pics/glider.png" alt="hacker emblem"/>
+      </div>
+
+ <h3><a name="german_translation"></a>Anmerkungen zur Deutschen Übersetzung</h3>
+ <p>
+  Diese Seite enthält die deutsche Übersetzung von Eric
+  Steven Raymonds <a href="http://www.catb.org/~esr/faqs/hacker-howto.html">
+   How To Become A Hacker</a> Copyright &copy; 2001 Eric
+  S. Raymond. Die ursprüngliche Übersetzung stammt von <a
+   href="mailto:oezi@oezi.de">Christopher Özbek</a>. Alle
+  Aktualisierungen und die Übersetzungen der neu hinzugekommenen
+  Teile stammen von <a href="mailto:bergner@linuxtaskforce.de">Sven
+  Bergner</a>. Diese Seite befindet sich im Moment noch in der
+  Korrekturphase. Ich habe die Übersetzung der fehlenden Teile
+  jetzt abgeschlossen und befinde mich momentan auf der Suche nach
+  Fehlern. Sowohl was die Rechtschreibung und Zeichensetzung angeht, als auch die
+  Formulierung einiger Textpassagen.
+ </p>
+ <p>
+  Fehlerkorrekturen, bessere Formulierungen oder Übersetzungen bitte
+  per <a href="mailto:bergner@linuxtaskforce.de">Mail</a> mitteilen. Ich
+  bin für jede Art von konstruktiver Kritik dankbar.
+ </p>
+ <p>
+  Vor dem Einsenden sollte aber das <a href="../howtos/korrektur-howto.html">Korrektur-Howto</a> gelesen
+  werden. Das macht hoffentlich allen beteiligten das Leben leichter.
+ </p>
+ <br/>
+ <p>
+    Vielen Dank an die folgenden Personen für ihre Korrekturvorschläge :<br/>
+    (in chronologischer Reihenfolge der Korrektureinsendungen)
+    <ul>
+      <li>Felix Linsenmeier</li>
+      <li>Frank Cotting</li>
+      <li>Peter Hüwe</li>
+      <li>Mario (mariooriginal)</li>
+      <li>Patrick-Oliver Scheinert</li>
+      <li>Andreas K. Förster</li>
+      <li>Martin Gebert</li>
+      <li>Simon Eugster</li>
+      <li>Josef Schneider</li>
+      <li>Jonas Grote</li>
+      <li><a href="http://www.iaskquestions.com">Erkan Yilmaz</a></li>
+      <li>Kai Wolf</li>
+      <li>J Grueb</li>
+      <li>Carlo Capocasa</li>
+      <li>Amir Plavac</li>
+    </ul>
+ </p>
+
+      <br/>
+      <div class="mediaobject">
+        <img src="../pics/glider.png" alt="hacker emblem"/>
+      </div>
+ 
+ <h3><a name="why_this"></a>Warum dieses Dokument?</h3>
+  <p>
+   Als Betreuer der <a href="http://www.catb.org/jargon"
+   target="_top">Jargon-Datei</a> und Autor einiger anderer
+   wohlbekannter Dokumente zu ähnlichen Themen bekomme ich oft
+   E-Mail anfragen von enthusiastischen Netzneulingen, die (im Affekt)
+   fragen: &quot;Wie kann ich lernen ein Hackerzauberer zu werden?&quot;.
+   1996 stellte ich fest, dass es keine anderen FAQs oder Web-Seiten zu
+   geben schien, die sich mit dieser Frage beschäftigen, deswegen
+   begann ich mit dieser. Viele Hacker betrachten diese Liste
+   mittlerweile als maßgeblich und ich vermute, dass das
+   bedeutet, dass es das ist. Trotzdem beanspruche ich nicht die
+   alleinige Autorität auf diesem Gebiet. Wenn Dir nicht
+   gefällt, was Du hier liest, dann schreibe Deine eigene Liste.
+  </p>
+  <p>
+   Falls Du einen Auszug dieses Dokumentes offline liest, die aktuelle
+   Version findest Du unter <a href="http://www.catb.org/~esr/faqs/hacker-howto.html" target="_top">
+   http://www.catb.org/~esr/faqs/hacker-howto.html</a>.
+  </p>
+  <p>
+   Hinweis: Es gibt eine Liste von <a href="#FAQ" title="Häufig
+   gestellte Fragen">Häufig gestellten Fragen</a> am Ende dieses Dokumentes.
+   Bitte lies diese Liste &ndash;zweimal&ndash;, bevor Du mir eine Frage zu
+   diesem Dokument stellst.
+  </p>
+  <p>
+   Das Fünf-Punkte-in-neun-Quadraten Symbol, das dieses Dokument
+   verziert, nennt sich <span
+   class="emphasis"><em>glider</em></span>. Es ist ein einfaches
+   Muster mit einigen überraschenden Eigenschaften, das zu einer
+   mathematischen Simulation namens <a
+   href="http://dmoz.org/Computers/Artificial_Life/Cellular_Automata/"
+   target="_top">Life</a> gehört, das schon viele Hacker für viele
+   Jahre fasziniert hat. Ich denke, dass es ein gutes Emblem ist,
+   für das was Hacker sind &ndash; abstrakt, am Anfang etwas
+   mysteriös, aber ein Tor zu einer ganzen Welt mit einer eigenen
+   komplizierten Logik. Du kannst <a href="http://www.catb.org/~esr/hacker-emblem/"
+   target="_top">hier</a> mehr über das Glider Emblem erfahren.
+  </p>
+
+      <br/>
+      <div class="mediaobject">
+        <img src="../pics/glider.png" alt="hacker emblem"/>
+      </div>
+
+ <h3><a name="what_is"></a>Was ist ein Hacker?</h3>
+
+<p>
+ Die <a href="http://www.catb.org/jargon" target="_top">Jargon-Datei</a> enthält eine Vielzahl von
+ Definitionen des Begriffes &quot;Hacker&quot;, welche
+ hauptsächlich etwas mit technischem Können, einer Freude an
+ der Lösung von Problemen und dem Übertreten von Grenzen zu
+ tun haben. Wenn Du aber wissen möchtest, wie man ein Hacker
+ <span class="emphasis"><em>wird</em></span>, dann sind nur zwei
+ Sachen wirklich wichtig.
+</p>
+<p>
+ Es gibt eine Gemeinschaft, eine verteilte Kultur, bestehend aus
+ Programmierern und Netzwerk-"Magiern", deren Wurzeln zurück bis
+ in die Zeit der ersten Minicomputer, mit Rechenzeitaufteilung  und
+ den frühesten ARPA-Netz-Versuchen, zurück reichen. Die
+ Mitglieder dieser Kultur schufen den Begriff "Hacker". Hacker bauten
+ das Internet, Hacker machten das UNIX-Betriebssystem zu dem, was es
+ heute ist, Hacker betreiben das Usenet, Hacker brachten das World
+ Wide Web zum Laufen, Hacker taten noch viel mehr. Wenn Du ein Teil
+ dieser Kultur bist, wenn Du zu ihrem Sein und ihrer Entwicklung
+ beigetragen hast, andere Mitglieder wissen wer Du bist
+ <cite>und</cite> Dich einen Hacker nennen, erst dann bist Du auch
+ wirklich ein Hacker.
+</p>
+<p>
+Die Hacker-Gedankeneinstellung auf der anderen Seite ist nicht
+beschränkt auf die Software-Hacker-Gemeinschaft. Es gibt
+Meinungen, welche die Haltung der Hacker auf andere Dinge, wie
+Elektronik oder Musik &ndash; eigentlich auf die höchste Stufe des
+Könnens jeder Kunst oder Wissenschaft &ndash;
+übertragen. Software-Hacker erkennen diese verwandten Seelen an
+und nennen sie gelegentlich ebenfalls "Hacker", ja es gibt sogar Stimmen, die sagen,
+die Einstellung der Software-Hacker ist absolut unabhängig von
+dem jeweiligen Medium, mit dem sich der Hacker beschäftigt. In
+dem Rest dieses Textes wollen wir uns jedoch auf die Eigenschaften und
+Einstellungen der Software-Hacker und ihre Traditionen konzentrieren,
+welche den Begriff Hacker ins Leben rief.
+</p>
+<p>
+ Es gibt noch eine andere Gruppe von Leuten, die sich lautstark als Hacker
+ bezeichnen, diesen Namen aber in keinster Weise verdient haben. Es sind
+ Menschen (meist pubertierende männliche Wesen), welche einen
+ Spaß daran haben, in Computer einzubrechen und das Telefonnetz
+ zu zerstören. Echte Hacker nennen diese Leute "Cracker" und
+ wollen mit ihnen nichts zu tun haben. Wirkliche Hacker halten Cracker
+ für ein faules, unverantwortliches und nicht besonders schlaues
+ Pack, denn genauso wenig, wie man durch das Knacken von
+ Sicherheitscodes ein Hacker wird, wird man durch das
+ Kurzschließen eines Autos zu einem KFZ-Mechaniker.
+ Unglücklicherweise sind viele Journalisten und
+ Schreiber darauf verfallen, das Wort Hacker als Beschreibung von
+ Cracker zu verwenden; dies verärgert echte Hacker ungemein...
+</p>
+<p>
+ Der grundlegende Unterschied ist dieser: Hacker <cite>bauen</cite> Dinge auf,
+  Cracker <cite>zerstören</cite> sie.
+</p>
+<p>
+ Wenn Du ein Hacker werden willst, lies weiter. Wenn Du aber ein
+ Cracker werden willst, geh, lies die Newsgroup <a
+ href="news:alt.2600" target="_top">alt.2600</a> und bereite dich
+ darauf vor, fünf bis zehn Jahre im Knast zu verbringen, nachdem
+ Du herausgefunden hast, dass Du doch gar nicht so schlau bist, wie du
+ gedacht hast. Und dies ist alles, was ich über Cracker zu sagen
+ habe!
+</p>
+<br/>
+        <div class="mediaobject">
+          <img src="../pics/glider.png" alt="hacker emblem"/>
+        </div>
+
+<h3><a name="attitude"></a>Die Hacker-Einstellung</h3>
+        <div class="toc">
+          <dl>
+              <dt><a href="#believe1">1. Die Welt ist voll von faszinierenden Problemen, die alle nur darauf warten, gelöst zu werden.</a></dt>
+              <dt><a href="#believe2">2. Kein Problem sollte jemals zweimal gelöst werden müssen.</a></dt>
+              <dt><a href="#believe3">3. Langeweile und Schufterei sind schlecht.</a></dt>
+              <dt><a href="#believe4">4. Freiheit ist gut.</a></dt>
+              <dt><a href="#believe5">5. Die innere Einstellung ist kein Ersatz für Kompetenz.</a></dt>
+          </dl>
+        </div>
+
+<p>
+ Hacker lösen Probleme und bauen Dinge auf, sie glauben an
+ Freiheit und freiwillige, gegenseitige Hilfe. Um als Hacker
+ akzeptiert zu werden, musst Du Dich verhalten, als hättest
+ Du diese Einstellung. Und um Dich wirklich so zu verhalten, als hättest
+ Du diese Einstellung, musst Du wirklich an sie glauben.
+</p>
+<p>
+ Wenn Du nun aber glaubst, die Hacker-Einstellung sei der
+ Schlüssel zu deiner Akzeptanz durch die Gemeinschaft, liegst du
+ falsch. Ein Mensch zu werden, der diese Eigenschaften glaubt und
+ verinnerlicht hat, ist wichtig für <cite>dich selbst</cite>, sie
+ helfen dir, leichter zu lernen und halten Dich motiviert. Genau wie
+ in allen kreativen Künsten ist es am effektivsten, das Denken der Meister
+ zu imitieren &ndash; nicht nur von der Wissensseite, sondern auch von der
+ emotionalen.
+</p>
+<p>
+ Oder, wie es das nachfolgende moderne Zen-Gedicht ausdrückt:
+</p>
+
+<div class="literallayout">
+ <p>
+  &nbsp;&nbsp;&nbsp;&nbsp;Um&nbsp;dem&nbsp;Pfad&nbsp;zu&nbsp;folgen:<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;Schau&nbsp;auf&nbsp;den&nbsp;Meister,<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;Folge&nbsp;dem&nbsp;Meister,<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;Laufe&nbsp;mit&nbsp;dem&nbsp;Meister,<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;Durchschaue&nbsp;den&nbsp;Meister,<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;Werde&nbsp;der&nbsp;Meister.<br/>
+ </p>
+</div>
+
+<p>
+ (Anmerkung des Übersetzers: Da das Übersetzen von Gedichten
+ immer etwas problematisch ist, habe ich in diesem Fall das Original
+ zusätzlich eingefügt.)
+</p>
+<div class="literallayout">
+ <p>
+  <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;To&nbsp;follow&nbsp;the&nbsp;path:<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;look&nbsp;to&nbsp;the&nbsp;master,<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;follow&nbsp;the&nbsp;master,<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;walk&nbsp;with&nbsp;the&nbsp;master,<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;see&nbsp;through&nbsp;the&nbsp;master,<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;become&nbsp;the&nbsp;master.<br/>
+ </p>
+</div>
+
+<p>
+ So, wenn Du wirklich ein Hacker werden möchtest, dann wiederhole
+ die folgenden Dinge, bis Du sie selbst glaubst:
+</p>
+
+<h4><a name="believe1"></a>1. Die Welt ist voll von faszinierenden Problemen,
+ die alle nur darauf warten, gelöst zu werden.</h4>
+
+<p>
+ Ein Hacker zu sein, bedeutet jede Menge Spaß, aber es ist eine
+ Art von Spaß, die viel Anstrengung erfordert. Anstrengung zu
+ vollbringen setzt Motivation voraus. Erfolgreiche Athleten bekommen
+ ihre Motivation aus einer Art körperlichen Hochgefühls,
+ wenn sie ihre Körper trainieren oder wenn sie sich bis über
+ ihre Leistungsgrenzen hinaus verausgaben. So ähnlich geht es dem
+ Hacker, er muss eine grundlegende Erregung verspüren, wann
+ immer er ein Problem lösen, seine Fähigkeiten erweitern
+ oder seinen Geist trainieren konnte.
+</p>
+<p>
+ Wenn Du nicht zu den Menschen gehörst, die schon von Natur aus so fühlen,
+ musst Du eben einer werden, wenn Du ein Hacker werden willst,
+ denn sonst wirst Du schnell bemerken, dass deine Hacker-Energie von
+ Ablenkungen wie Sex, Geld oder sozialer Anerkennung verbraucht wird.
+</p>
+<p>
+ (Du musst außerdem eine Art von Glauben in Deine eigene
+ Lernfähigkeit entwickeln &ndash; einen Glauben, der Dich dazu bringt,
+ dass &ndash; auch wenn Du keinen blassen Schimmer haben solltest, wie Du das
+ gesamte Problem lösen kannst &ndash; wenn Du nur ein kleines Stück
+ löst und davon lernst, Du genug gelernt haben wirst, um das
+ nächste Stückchen zu lösen &ndash; und so weiter, bis Du es
+ irgendwann geschafft hast.)
+</p>
+
+<h4><a name="believe2"></a>2. Kein Problem sollte jemals zweimal gelöst werden müssen.</h4>
+
+<p>
+ Kreative Köpfe sind wertvolle und seltene Güter. Sie sollten nicht
+ darauf verschwendet werden, das Rad noch einmal zu erfinden, wenn
+ doch so viele wunderbare neue Probleme darauf warten gelöst zu
+ werden.
+</p>
+<p>
+ Um wie ein Hacker zu handeln, musst Du glauben, dass die Zeit,
+ die anderen Hackern zum Denken zur Verfügung steht, kostbar ist &ndash;
+ so kostbar, dass es beinahe eine moralische Pflicht ist deine
+ Informationen zu teilen, Probleme zu lösen und die Lösung
+ weiterzugeben, damit andere Hacker sich <span class="emphasis"><em>neuen</em></span>
+ Problemen zuwenden können, anstatt andauernd bereits gelösten wieder aufrollen
+ zu müssen.
+</p>
+<p>
+ Denke aber trotzdem immer daran, dass der Grundsatz "Kein Problem sollte
+ jemals doppelt gelöst werden." nicht impliziert, dass du annehmen
+ sollst, dass alle existierenden Lösungen heilig sind, oder das es
+ nur eine richtige Lösung für ein gegebenes Problem gibt. Oftmals
+ lernen wir bei der ersten Lösung sehr viel mehr über das
+ Problem, als wir vorher wussten. Es ist OK, und oft auch notwendig, zu
+ entscheiden, dass man etwas besser machen kann. Was nicht OK ist, sind
+ künstliche technische, rechtliche oder politische Barrieren (wie
+ z.B. Closed-Source Software),  die verhindern, dass eine gute
+ Lösung wiederverwendet werden kann und Leute dazu <span
+ class="emphasis"><em>zwingt</em></span> das Rad neu zu erfinden.
+</p>
+<p>
+ (Das bedeutet nicht, dass Du <span class="emphasis"><em>alle</em></span>
+ Errungenschaften deiner Kreativität weggeben musst, obwohl denjenigen, die dies
+ tun, der höchste Respekt entgegengebracht wird. Es ist mit den
+ Hackerwerten vereinbar, genug zu verkaufen, um sich mit Computern,
+ Essen und einem Dach über dem Kopf zu versorgen. Es ist
+ vertretbar seine Hacker-Fähigkeiten einzusetzen, um eine Familie zu
+ versorgen oder sogar um reich zu werden, solange Du nie
+ vergißt, dass Du ein Hacker bist, während Du all dies
+ tust.)
+</p>
+
+<h4><a name="believe3"></a>3. Langeweile und Schufterei sind schlecht.</h4>
+
+<p>
+ Hacker (und generell alle kreativen Leute) sollten niemals gelangweilt
+ sein oder dazu genötigt sein, stumpfsinnige, sich ständig
+ wiederholende Arbeit zu tun, weil dies natürlich bedeutet, dass
+ sie nicht das tun, was nur sie tun könnten &ndash; nämlich neue
+ Probleme lösen. Diese Verschwendung schadet allen. Also ist
+ Langeweile nicht nur unangenehm, sondern einfach schlecht.
+</p>
+<p>
+ Um sich wie ein Hacker zu benehmen, musst Du dies stark genug
+ glauben, um die langweiligen Arbeiten so weit wie möglich
+ wegautomatisieren zu wollen, nicht nur für Dich selbst, sondern
+ auch für alle anderen Menschen (besonders andere Hacker).
+</p>
+<p>
+ (Es gibt eine Ausnahme von dieser Regel. Hacker tun manchmal Sachen,
+ welche auf den ersten Blick langweilig und stumpfsinnig erscheinen,
+ aber in Wirklichkeit dazu dienen, zu üben den Kopf frei zu
+ kriegen, eine Fähigkeit zu erwerben oder eine bestimmte
+ Erfahrung zu erlangen, welche andersartig nicht erreicht werden
+ kann. Aber dies ist absolut freiwillig &ndash; niemand, der bei klarem
+ Verstand ist, sollte jemals zu Langeweile gezwungen werden.)
+</p>
+
+<h4><a name="believe4"></a>4. Freiheit ist gut.</h4>
+
+<p>
+ Hacker sind von Natur aus antiautoritär veranlagt. Jeder, der
+ Dir Befehle geben kann, kann Dich auch davon abhalten, das Problem zu
+ lösen, das Dich gerade fasziniert, und wird &ndash; dies ist einfach
+ die Art, nach der autoritäre Gehirne arbeiten &ndash; ein paar
+ furchtbar blödsinnige Gründe finden, damit er dies auch tun
+ kann. Autoritäre Einstellungen müssen bekämpft werden,
+ wo immer sie gefunden werden, damit sie nicht Dich und andere Hacker
+ ersticken.
+</p>
+<p>
+ (Dies ist nicht das selbe, wie alle Autoritäten zu
+ bekämpfen. Kinder müssen angeleitet und Kriminelle
+ aufgehalten werden. Ein Hacker wird darüber hinaus manchen Arten
+ von Autorität zustimmen und sie akzeptieren, wenn er dadurch
+ etwas bekommt, was für ihn wertvoller ist als die Zeit, die er
+ mit dem Befolgen der Befehle verbringt. Aber dies ist ein begrenzter,
+ beabsichtigter Handel; aber die Art der persönlichen
+ Unterwerfung, die Autoritäten verlangen, ist kein Angebot.)
+</p>
+<p>
+ Autorität gedeiht auf dem Boden der Zensur und Geheimhaltung.
+ Sie mißtraut freiwilliger Zusammenarbeit und freiheitlicher
+ Aufteilung der Informationen &ndash; die einzige
+ &quot;Zusammenarbeit&quot;, die sie gerne sehen ist diese, die unter
+ ihrer Kontrolle steht. Wenn Du also wie ein Hacker handeln willst,
+ musst Du eine instinktive Feindschaft gegenüber Zensur,
+ Geheimhaltung und dem Einsatz von Gewalt oder Betrug entwickeln, und
+ Du musst bereit sein, nach diesem Glauben zu handeln.
+</p>
+
+<h4><a name="believe5"></a>5. Die innere Einstellung ist kein Ersatz für Kompetenz.</h4>
+
+<p>
+ Um ein Hacker zu sein, solltest Du einige dieser Einstellungen entwickeln.
+  Aber eine Einstellung nur zu
+ übernehmen, das macht Dich genausowenig zu einem Hacker, wie sie Dich
+ zu einem Rockstar oder hervorragenden Athleten machen würde. Um ein
+ Hacker zu werden, benötigst Du Intelligenz, Übung, Hingabe
+ und viel harte Arbeit.
+</p>
+<p>
+ Deshalb musst Du lernen, fremden Einstellungen zu mißtrauen
+ und Kompetenz jedweder Art zu respektieren. Hacker werden es nicht
+ zulassen, dass Angeber ihre Zeit verschwenden, aber sie verehren
+ Können &ndash; besonders Kompetenz im Hacken, aber generell jede
+ Form von Kompetenz ist wertvoll. Kompetenz in gefragten Fähigkeiten, die nur wenige
+ beherrschen, ist besonders gut, und Kompetenz in gefragten
+ Fähigkeiten, die geistige Klarheit, Geschicklichkeit und
+ Konzentration erfordern, ist das absolut Beste.
+</p>
+<p>
+ Wenn Du Können und Wissen schätzt, wirst Du Freude daran
+ haben, sie in Dir selbst zu entwickeln &ndash; die harte Arbeit und die
+ Hingabe werden von solch einer Intensität sein, dass sie eher
+ einem Spiel ähneln als Schufterei. Diese Einstellung ist absolut
+ überlebenswichtig, wenn Du ein Hacker werden willst.
+</p>
+<p>
+
+<br/>
+          <div class="mediaobject">
+            <img src="../pics/glider.png" alt="hacker emblem"/>
+          </div>
+
+<h3><a name="basic_skills"></a>Grundlegende Hacker-Fähigkeiten</h3>
+
+        <div class="toc">
+          <dl>
+            <dt><a href="#skills1">1. Lerne wie man programmiert.</a></dt>
+            <dt><a href="#skills2">2. Hol Dir eines der OpenSource UNIXe und lerne wie man es benutzt und betreibt.</a></dt>
+            <dt><a href="#skills3">3. Lerne das Web zu benutzen und HTML-Code zu schreiben.</a></dt>
+            <dt><a href="#skills4">4. Wenn Du keine brauchbaren Englischkenntnisse hast, dann erwirb sie.</a></dt>
+          </dl>
+        </div>
+
+<p>
+ Die Hackereinstellung ist wichtig, aber die Hacker-Fähigkeiten
+ sind es noch viel mehr. Die richtige Einstellung ist kein Ersatz für
+ Können, und es gibt eine Sammlung von Fähigkeiten, welche
+ Du unbedingt haben musst, bevor irgendein Hacker davon
+ träumen wird, Dich einen Hacker zu nennen.
+</p>
+<p>
+ Diese Werkzeugkiste des Hackers verändert sich nur langsam im
+ Laufe der Zeit. Der Wandel findet in dem Maße statt, indem der technische
+ Fortschritt neue Fähigkeiten erfordert und alte
+ überflüssig macht. Zum Beispiel ist
+ Maschinenspracheprogrammierung früher eine Bedingung gewesen,
+ während HTML bis vor kurzem keine Rolle spielte. Aber mittlerweile
+ kann man mit ziemlicher Sicherheit die folgenden Punkte hinzuzählen:
+</p>
+
+<h4><a name="skills1"></a>1. Lerne, wie man programmiert.</h4>
+
+<p>
+ Dies ist natürlich die grundlegenste Hackerfähigkeit. Wenn
+ Du gar keine Programmiersprache kennst, empfehle ich Dir, mit Python
+ zu beginnen. Die Sprache wurde sauber designt, ist gut dokumentiert
+ und relativ gnädig zu Anfängern. Auch wenn es eine gute
+ Anfängersprache ist, ist sie kein Spielzeug; sie ist sehr
+ mächtig, flexibel und gut einsetzbar bei großen Projekten.
+ Ich habe eine ausführlichere <a href="http://www.linuxjournal.com/article.php?sid=3882" target="_top">Evaluierung von Python</a>
+ geschrieben. Gute <a href="http://www.python.org/doc/Intros.html"
+ target="_top">Tutorials</a> gibt es auf der <a
+ href="http://wiki.python.org/moin/BeginnersGuide" target="_top">Python Web-Seite</a>.
+</p>
+<p>
+ Bisher habe ich Java empfohlen, als ein Sprache, die man sehr früh lernen soll,
+ aber <a
+ href="http://www.stsc.hill.af.mil/CrossTalk/2008/01/0801DewarSchonberg.html"
+ target="_top">diese Kritik</a> hat meine Meinung geändert (suche mal nach
+ &quot;The Pitfalls of Java as a First Programming Language&qout; in diesem
+ Artikel). Ein Hacker kann nicht, wie es in dem Artikel genannt wird &quot;ein
+ Problem angehen, wie ein Klempner im Baumarkt&quot;; Du musst wissen, was die
+ Komponenten, die Du benutzt <em>tun</em>. Jetzt denke ich, dass es das beste ist
+ zuerst C und Lisp zu lernen und danach Java.
+</p>
+<p>
+ Aber sei Dir gewiss, dass Du nicht das Können eines Hackers
+ erreichst, wenn Du nur ein oder zwei Programmiersprachen kennst
+ &ndash; Du musst lernen wie man über Programmierprobleme
+ allgemein nachdenkt, unabhängig von irgendeiner speziellen
+ Programmiersprache. Um ein richtiger Hacker zu sein, musst Du
+ den Punkt erreichen, an dem Du eine neue Programmiersprache innerhalb
+ von wenigen Tagen lernst, indem Du das, was in dem Handbuch steht, mit
+ dem verknüpfst, was Du schon weißt. Das bedeutet, Du
+ solltest viele verschiedene Sprachen lernen.
+</p>
+<p>
+ 1997 war
+ die Sprache, die Du auf jeden Fall lernen musstest, C (obwohl es
+ nicht diejenige sein sollte, die Du als erstes lernst). Aber Du bist
+ einfach kein Hacker, oder eben hauptsächlich nur ein
+ Programmierer, wenn Du nur eine Sprache kennst &ndash; Du musst
+ lernen, Probleme des Programmierens in einer allgemeinen Form zu
+ betrachten, unabhängig von der jeweiligen Umsetzung in die
+ verschiedenen Sprachen. Um ein echter Hacker zu werden, musst Du
+ an den Punkt gelangen, wo Du eine neue Sprache innerhalb von Tagen
+ lernen kannst, weil Du den Inhalt des Handbuchs direkt zu dem in
+ Beziehung setzen kannst, was Du bereits weißt. Dies bedeutet,
+ Du solltest viele verschiedene Ansätze, sprich
+ Programmiersprachen, Dir zu eigen machen. 
+</p>
+<p>
+ Wenn Du ernsthaft programmieren willst, solltest Du C lernen, die
+ Kernsprache von Unix. C++ ist sehr verwandt zu C; wenn Du eine von
+ beiden kennst, ist das Erlernen der anderen nicht mehr sehr
+ schwierig. Trotzdem ist keine von beiden eine gute
+ Einsteigersprache. Und, je mehr Du es vermeiden kannst, in C zu
+ programmieren, um so produktiver wirst Du sein.
+</p>
+<p>
+ C ist sehr effizient und sehr
+ ressourcenschonend. Unglücklickerweise erreicht C diese Effizienz
+ dadurch, dass es von Dir verlangt, dass Du eine ganze Menge von
+ low-level Resourcenverwaltung (z.B. Speicher) von Hand
+ verwaltest. Dieser ganze low-level Code ist sehr komplex und
+ fehlerbehaftet und beansprucht viel Zeit bei der Fehlersuche.
+ Bei den heutigen Computern, so leistungstark wie sie sind, ist das
+ ein schlechter Handel &ndash; es ist schlauer, eine Programmiersprache
+ einzusetzen, die etwas weniger effizient mit den Resourcen des
+ Computers umgeht, aber dafür <span
+ class="emphasis"><em>sehr</em></span>
+ effizient mit Deiner Zeit. So wie z.B. Python.
+</p>
+<p>
+ Weitere Programmiersprachen, die für Hacker von besonderem
+ Interesse sind, sind unter anderem <a href="http://www.perl.com"
+ target="_top">Perl</a>
+ und <a href="http://www.lisp.org/" target="_top">LISP</a>.
+ Perl zu lernen lohnt sich aus praktischen Gründen; es ist sehr
+ weit verbreitet bei aktiven Web-Seiten und bei der
+ System-Administration. Selbst wenn Du nie ein eigenes
+ Perl-Programm schreiben wirst, solltest Du wenigstens in der Lage
+ sein, Perl-Programme zu lesen. Viele Leute benutzen Perl in der Art,
+ in der ich Dir empfehlen würde, Python zu benutzen, um C-Programmierung
+  zu vermeiden, wo es nicht auf die Effizienz von C
+ ankommt. Deshalb wird es nötig sein, dass Du in der Lage bist,
+ diesen Code zu verstehen.
+</p>
+<p>
+ Es gibt einen ganz anderen Grund dafür, LISP zu lernen &ndash;
+ die tiefgründige, erleuchtende Erfahrung, wenn Du es
+ schlussendlich verstanden hast. Diese Erfahrung wird Dich bis zum
+ Ende Deiner Tage zu einem besseren Programmierer machen, auch dann,
+ wenn Du nie wirklich LISP benutzen wirst. (Du kannst relativ einfach einige
+ grundlegende Erfahrungen sammeln, wenn Du Modi vom Emacs Text Editor
+ modifizierst oder neu schreibst, oder Script-Fu Plugins für GIMP.)
+</p>
+<p>
+ Am besten wäre es, wenn Du alle fünf
+ Programmiersprachen Python, Java, C/C++, Perl und LISP lernen würdest.
+ Abgesehen davon, dass sie die wichtigsten Hackersprachen sind, repräsentieren diese
+ Programmiersprachen sehr unterschiedliche Herangehensweisen an die
+ Programmierung dar, und jede davon wird Dich auf wertvolle Art bereichern.
+</p>
+<p>
+ Aber denke immer daran, dass es nicht ausreicht einfach eine gewisse Anzahl an
+ Programmiersprachen zu lernen um ein Hacker oder selbst nur ein Programmierer
+ zu werden. Du musst generell lernen wie man in Programmierproblemen denkt,
+ unabhängig von irgend einer Programmiersprache. Um ein echter Hacker zu sein,
+ musst Du an den Punkt kommen, an dem Du eine neue Sprache innerhalb von Tagen
+ lernen kannst, indem Du die Dinge die im Handbuch stehen mit dem in Verbindung
+ bringst, die Du bereits weißt. Das bedeutet, Du solltest einige sehr
+ unterschiedliche Programmiersprachen lernen.
+</p>
+<p>
+ Ich kann keine komplette Anleitung geben, wie man
+ programmieren lernt&ndash; dazu ist diese Fähigkeit zu
+ komplex. Aber ich kann Dir sagen, dass Du mit Büchern und Kursen
+ nicht sehr weit kommen wirst - viele, vielleicht die
+ <span class="emphasis"><em>meisten</em></span> Hacker, haben sich alles selbst
+ beigebracht. Du kannst die Eigenschaften einer Programmiersprache
+ &ndash; ein Teil des Wissens &ndash; aus Büchern lernen, aber
+ das Verständnis, das aus diesem Wissen echte Fähigkeiten
+ macht, erhält man nur durch Praxiserfahrung und Lehrzeit. 
+ Was Du tun musst, ist (a) <span class="emphasis"><em>Programm-Code lesen</em></span> und
+ (b) <span class="emphasis"><em>Programm-Code schreiben</em></span>.
+</p>
+<p>
+ Peter Norvig, einer der Top-Hacker bei Google und Co-Autor eines weit
+ verbreiteten Buches über künstliche Intelligenz, hat einen
+ hervorragenden Aufsatz mit dem Titel <a
+ href="http://www.norvig.com/21-days.html" target="_top">Teach Yourself
+ Programming in Ten Years</a> geschrieben. Sein &cite;Rezept zum
+ erfolgreichen Programmieren&cite; ist es Wert gründlich beachtet
+ zu werden.
+</p>
+<p>
+ Programmieren lernen ist das gleiche wie in einer natürlichen Sprache gut
+ schreiben zu lernen. Der beste Weg ist, Code zu lesen, der von
+ Meistern der Programmierung geschrieben wurde, und dann etwas selber
+ zu schreiben, wieder jede Menge zu lesen und ein bißchen zu
+ schreiben, wieder lesen und diesmal mehr zu schreiben... und dies
+ alles so lange zu wiederholen, bis Du beginnst, Stärken und
+ Effizienz in Deinen Arbeiten zu entwickeln.
+</p>
+<p>
+ Guten Programmcode zu finden, der sich zum Lesen eignet, war
+ früher ziemlich schwer, weil es einfach so wenig große
+ Programme als Quelltext für Grünschnäbel zum Lesen und
+ Herumbasteln gab. Dies hat sich dramatisch geändert, freie
+ Software, freie Programmierwerkzeuge und freie
+ Betriebssysteme (alles als Quelltext verfügbar und alles von
+ Hackern geschrieben) ist jetzt weitgehend verfügbar. Was uns
+ nahtlos zu unserem nächsten Thema bringt...
+</p>
+
+<h4><a name="skills2"></a>2. Hol Dir eines der OpenSource UNIXe und lerne wie man es benutzt und betreibt.</h4>
+
+<p>
+ Ich nehme an, Du hast einen PC oder hast Zugriff auf einen. (Nimm dir
+ einen Moment Zeit um zu würdigen, was das bedeutet. Die
+ ursprüngliche Hacker-Kultur
+ entwickelte sich zu einer Zeit, als Computer so teuer waren, dass kein
+ Privatmensch sich einen leisten konnte.) Der einzige wichtige
+ Schritt, den jeder Newbie in Richtung des Erwerbes von
+ Hackerfähigkeiten tätigen kann, ist es, sich eine Kopie von
+ Linux oder von einem der freien BSD-UNIXe oder OpenSolaris zu besorgen,
+ diese auf einem PC zu installieren und sie zu betreiben.
+</p>
+<p>
+ Klar, es gibt noch andere Betriebssysteme in der Welt außer
+ UNIX. Aber sie werden in binärer Form ausgeliefert &ndash; Du
+ kannst also den Code weder lesen noch verändern. Unter Microsoft
+ Windows oder einem beliebigen anderen Closed-Source System hacken zu
+ lernen ist so, wie wenn man mit einer Zwangsjacke tanzen lernen soll.
+</p>
+<p>
+ Unter Mac OS X ist es durchaus möglich, allerdings sind nur Teile
+ des Systems Open Source &ndash; Du wirst wahrscheinlich mit einigen
+ Problemen zu kämpfen haben und Du musst sehr aufpassen, dass Du
+ Dir nicht die schlechten Angewohnheiten von Apple's
+ proprietären Code angewöhnst. Wenn Du Dich auf das Unix
+ unter der Schale konzentrierst, wirst Du viele nützliche Dinge
+ lernen können.
+</p>
+<p>
+ UNIX ist das Betriebssystem des Internets. Während Du das
+ Internet benutzen kannst, ohne UNIX zu kennen, kannst Du kein
+ Internet-Hacker sein ohne UNIX zu verstehen. Aus diesem Grund ist
+ die Hacker-Gemeinde heutzutage sehr stark UNIX-zentriert. (Dies war
+ nicht immer so, und manche Hacker aus den alten Zeiten sind ganz und
+ gar nicht glücklich damit, aber das Zusammenspiel zwischen UNIX
+ und dem Internet scheint so stark geworden zu sein, dass selbst
+ Microsofts Muskeln sie nicht zu trennen vermag.)
+</p>
+<p>
+ Also, bringe ein Unix zum laufen &ndash; ich persönlich mag
+ Linux, aber es gibt auch andere Möglichkeiten (und ja, Du
+ <span class="emphasis"><em>kannst</em></span> sowohl Linux als auch
+ Microsoft Windows auf der selben Machine betreiben). Lerne
+ es. Benutze es. Spiel damit herum. Verwende es für das 
+ Internet. Lies den Code. Modifiziere den Code. Du wirst bessere
+ Programmiertools (darunter C, LISP, Python und Perl) bekommen als
+ alle, von denen ein Microsoft-Betriebssystem nur träumen kann. Du
+ wirst Spass haben, und Du wirst mehr Wissen aufsaugen, als Du Dir
+ vorstellen konntest zu lernen, wenn Du mal als Meister-Hacker auf
+ Deine Anfänge zurückblickst.
+</p>
+<p>
+ Um mehr über UNIX zu lernen lies <a
+ href="http://www.catb.org/~esr/faqs/loginataka.html">The
+ Loginataka</a>. Du möchtest vielleicht auch noch einen Blick auf
+ <a href="http://catb.org/~esr/writings/taoup/" target="_top">The Art
+ Of Unix Programming</a> werfen.
+</p>
+<p>
+ Wenn Du Linux haben möchtest, sieh Dir die <a
+ href="http://www.linux.org/" target="_top">Linux Online!</a> Seite
+ an; Du kannst Linux von dort herunterladen oder (bessere Idee) dort
+ eine lokale Linux User Group (LUG) finden, die Dir bei der
+ Installation helfen kann.
+</p>
+<p>
+ Während den ersten zehn Jahren der Lebenszeit dieses HOWTO's habe ich
+ immer behauptet, dass aus Sicht eines neuen Anwenders alle Linux-Distributionen
+ nahezu gleich sind. Aber seit 2006-2007 hat sich eine Distribution als
+ besonders empfehlenswert herausgestellt: 
+ <a href="http://www.ubuntu.com/" target="_top">Ubuntu</a>. Während andere
+ Distributionen jede für sich ihre eigenen Stärken hat, ist Ubuntu die mit
+ Abstand am besten für Anfänger geeignete.
+</p>
+<p>
+ Hilfe und Material zu BSD Unix findet man unter 
+ <a href="http://www.bsd.org" target="_top">www.bsd.org</a>. 
+</p>
+<p>
+ Ein guter Weg um die ersten Gehversuche zu unternehmen, ist das was
+ Linux-Fans eine <a href="http://www.livecdnews.com/"target="_top">Live-CD</a> nennen, 
+ das ist eine Distribution, die komplett von einer CD läuft, ohne
+ dass die Festplatte des Computers modifiziert wird. Das wird langsam
+ sein, da CDs langsam sind, aber es ist ein Weg um sich die
+ Möglichkeiten anzusehen, ohne zu drastischen Maßnahmen greifen zu
+ müssen. 
+</p>
+<p>
+ Ich habe eine Einführung zum Thema <a
+ href="http://en.tldp.org/HOWTO/Unix-and-Internet-Fundamentals-HOWTO/index.html"
+ target="_top">Grundlagen zu Unix und dem Internet</a> geschrieben.
+</p>
+<p>
+ Ich habe bisher immer empfohlen weder Linux noch BSD ohne Hilfe von dritten zu
+ installieren. Heutzutage sind die Installationsprogramme so gut, dass auch
+ ein Anfänger in Lage ist eine solche Installation allein
+ durchzuführen. Trotzdem empfehle ich nach wie vor Kontakt zu einer lokalen
+ Linux-Gruppe aufzunehmen. Es kann nicht schaden und vielleicht vereinfacht es
+ den Einstieg.
+</p>
+
+<h4><a name="skills3"></a>3. Lerne, das Web zu nutzen und HTML-Code zu schreiben.</h4>
+
+<p>
+ Die meisten Dinge, die die Hacker-Kultur geschaffen hat, tun
+ ihre Arbeit außerhalb der Sichtweite des
+ Anwenders. Sie helfen beim Betreiben von Fabriken, Universitäten und
+ Büros, ohne wahrnehmbare Auswirkung auf das Leben der Nichthacker
+ zu haben.
+ Die eine, große Ausnahme, bildet das Web. Das große, glänzende
+ Hackerspielzeug, bei dem sogar <span
+ class="emphasis"><em>Politiker</em></span> zugeben, dass es die 
+ Welt verändert hat. Allein aus diesem Grund (und
+ wegen vielen Anderen noch dazu) musst Du lernen, wie man mit dem
+ Web umgeht.
+</p>
+<p>
+ Das heißt jetzt nicht, dass Du nur einen Browser bedienen
+ können musst (das kann jeder), sondern, dass Du HTML, die
+ Präsentationssprache des Webs, schreiben lernst. Wenn Du keine
+ Ahnung hast, wie man programmiert, wird Dir das Schreiben von HTML ein
+ paar geistige Verhaltensweisen beibringen, die Dir beim Lernen einer
+ Programmiersprache helfen werden. So baue Dir also deine eigene
+ Homepage. Versuche Dich an XHTML zu halten, da es eine sauberere
+ Sprache ist als das klassische HTML. (Es gibt einige gute
+ Anfängerkurse im Netz; <a href=
+ "http://htmldog.com/" target="_top">hier ist einer</a>.) 
+ (Anmerkung des Übersetzers: Speziell deutschsprachigen
+ Anfängern würde ich <a href="http://de.selfhtml.org">SelfHTML</a> empfehlen.)
+</p>
+<p>
+ Aber einfach nur eine Homepage zu haben, ist nicht einmal
+ annähernd genug, um Dich zu einem Hacker zu machen. Es gibt
+ Tausende Homepages im Web. Die meisten sind sinnloser, gehaltloser
+ Müll &ndash; zugegeben, sehr schicker Müll, aber doch nichts
+ anderes als Müll (mehr über dieses Thema gibt's auf der <a
+ href="http://www.catb.org/~esr/html-hell.html" target="_top">The HTML
+ Hell Page</a>).
+</p>
+<p>
+ Um betrachtenswert zu sein, muß deine Seite
+  <span class="emphasis"><em>Inhalt</em></span> haben &ndash; sie
+ muß interessant und/oder nützlich für andere Hacker
+ sein, was uns auch schon wieder zum nächsten Thema bringt...
+</p>
+
+<h4><a name="skills4"></a>4. Wenn Du keine brauchbaren Englischkenntnisse hast, dann erwirb sie.</h4>
+
+<p>
+ Als Amerikaner und somit jemand, der Englisch als Muttersprache
+ spricht, habe ich bisher gezögert, diese Empfehlung zu
+ äussern, damit es nicht als kultureller Imperialismus verstanden
+ wird. Aber verschiedene Muttersprachler anderer Sprachen haben mich
+ darin bestärkt, dass Englisch die &quot;Amtssprache&quot; der
+ Hackerkultur und des Internets ist, und dass man sie verstehen muss,
+ um in der Hacker-Community bestehen zu können.
+</p>
+<p>
+ Um 1991 musste ich feststellen, dass
+ viele Hacker, die Englisch als Fremdsprache sprechen, diese in
+ technischen Diskussionen verwenden, auch wenn sie diese Diskussionen
+ mit anderen Hackern führen, die die gleiche Sprache sprechen; zu
+ der Zeit wurde mir berichtet, dass Englisch ein wesentlich
+ größeres technisches Vokabular hat als jede andere
+ Sprache und deshalb einfach ein besseres Werkzeug für diese
+ Aufgabe sei. Aus diesem Grund sind Übersetzungen von technischen
+ Büchern, die ursprünglich in Englisch geschrieben wurden,
+ meistens unzulänglich (wenn sie überhaupt übersetzt werden).
+</p>
+<p>
+ Linus Torvalds, ein Finne, kommentiert seinen Quellcode in
+ Englisch (er kam wohl nie auf die Idee es anders zu tun). Sein
+ flüssiges Englisch war ein wichtiger Faktor bei seinem Erfolg,
+ eine weltweite Gemeinschaft von Entwicklern  für Linux zu
+ rekrutieren. Das ist ein Beispiel, dem es wert ist zu folgen.
+</p>
+<p>
+ Englisch als Muttersprache zu haben, garantiert dir nicht, dass deine
+ Sprachfertigkeiten für einen Hacker gut genug sind. Wenn deine
+ Texte halbwahr, grammatikalisch falsch, und voller Tippfehler
+ sind, dann werden es viele Hacker (mich eingeschlossen) wahrscheinlich
+ ignorieren. Obwohl schlampiges Schreiben nicht immer schlampiges Denken
+ bedeutet, haben wir dennoch einen starken Zusammenhang festgestellt und
+ wir haben keine Verwendung für schlampige Denker. Wenn Du bisher
+ nicht in der Lage bist kompetent zu schreiben, dann lerne es.
+</p>
+<br/>
+          <div class="mediaobject">
+            <img src="../pics/glider.png" alt="hacker emblem"/>
+          </div>
+
+<h3><a name="status"></a>Status in der Hacker-Gemeinschaft</h3>
+
+        <div class="toc">
+          <dl>
+            <dt><a href="#respect1">1. Schreibe Open-Source Software</a></dt>
+            <dt><a href="#respect2">2. Hilf mit, Open-Source Software zu testen und Fehler zu finden</a></dt>
+            <dt><a href="#respect3">3. Veröffentliche nützliche Informationen</a></dt>
+            <dt><a href="#respect4">4. Hilf mit, die Infrastruktur am Leben zu halten</a></dt>
+            <dt><a href="#respect5">5. Hilf der Hacker-Kultur</a></dt>
+          </dl>
+        </div>
+
+<p>
+ Wie in den meisten Kulturen ohne Geldwirtschaft basiert die
+ Hackergemeinde auf dem Ruf und Ansehen der Mitglieder. Du versuchst
+ interessante Probleme zu lösen, aber wie interessant und wie gut
+ deine Lösungen wirklich sind, entscheiden nur diejenigen, die
+ Dir ebenbürtig oder überlegen sind.
+</p>
+<p>
+ Folglich, wenn Du das Hacker-Spiel spielst, wirst Du lernen, 
+ hauptsächlich auf Grund der Achtung und der Haltung der anderen
+ Hacker gegenüber Deinen Fertigkeiten, Dich einzuschätzen
+ (deshalb bist Du auch kein Hacker, solange andere Hacker Dich nicht
+ so nennen). Diese Tatsache wird durch das Bild des Hackers als
+ Einzelgänger und einem Tabu der Hacker-Kultur, dass das Ego oder
+ Wertschätzung von anderen Menschen überhaupt in irgendeiner
+ Weise einen Einfluß auf die Motivation eines Einzelnen haben
+ könnten (seit dem Ende der 90er Jahre allmählich abflauend,
+ aber immer noch existent), getrübt.
+</p>
+<p>
+ Besonders die Hacker-Gemeinde ist das, was die Antropologen eine
+ <span class="emphasis"><em>gift culture</em></span> (Schenkkultur)
+ nennen. Status und Anerkennung
+ können in ihr weder durch Beherrschung von anderen Menschen
+ noch durch Schönheit, Besitz usw. erreicht werden, sondern nur,
+ indem man Dinge freiwillig weggibt. Genaugenommen, indem Du deine
+ Zeit, Kreativität und Ergebnisse deiner Fähigkeiten mit
+ anderen Menschen teilst.
+</p>
+<p>
+ Hier eine Liste der 5 Dinge, die Du tun kannst, um Dir den Respekt der Hacker zu verdienen:
+</p>
+
+<h4><a name="respect1"></a>1. Schreibe Open-Source Software, die jeder frei benutzen kann.</h4>
+
+<p>
+ Der erste (zentralste und traditionellste) Punkt besteht darin,
+ Programme zu schreiben, welche andere Hacker als nützlich
+ und/oder unterhaltsam ansehen. Stelle die Quellen dieser Programme
+ der gesamten Hacker-Kultur zur Verfügung.
+</p>
+<p>
+ (Gewöhnlich nannten wir diese Arbeiten &quot;Freie
+ Software&quot;, aber dieser Begriff verwirrte zu viele Menschen, die
+ sich nicht sicher waren, was &quot;frei&quot; in diesem Zusammenhang
+ bedeuten sollte. Die meisten von uns bevorzugen mittlerweile den Begriff
+ &quot;<a href="http://www.opensource.org/" target="_top">Open-Source</a>&quot; Software).
+</p>
+<p>
+ Die höchst verehrten Halbgötter der Hackergemeinde sind
+ diejenigen, die große und fähige Programme geschrieben
+ haben, welche ein weitverbreitetes Bedürfnis decken, und sie
+ danach zur freien Nutzung bereitgestellt haben, so dass jeder
+ sie jetzt benutzen kann.
+</p>
+<p>
+ Aber da gibt es noch ein kleines geschichtliches Detail. Während
+ die Hacker immer zu den Open-Source Entwicklern aufgesehen haben, als
+ härtesten Kern der Gemeinschaft, haben die meisten Hacker bis zur
+ Mitte der 90er Jahre die meiste Zeit an Closed-Source Software
+ gearbeitet.  Das galt auch noch 1996 als ich die erste Version dieses
+ Howto verfasst habe; es brauchte die stärkere Verbreitung von
+ Open-Source Software nach dem Jahr 1997 um diese Dinge zu ändern.
+ Heute sind "die Hacker-Gemeinschaft" und "Open-Source Entwickler" zwei
+ Beschreibungen für im Wesentlichen gleiche Kultur und Bewegung
+ &ndash; aber man sollte nie vergessen, dass das nicht immer so war.
+</p>
+
+<h4><a name="respect2"></a>2. Hilf mit, Open-Source Software zu testen und Fehler zu finden</h4>
+
+<p>
+ Sie achten auch Personen, die Fehler in Open-Source Software
+ suchen und beheben. In dieser unvollkommenen Welt verbringen wir
+ zwangsläufig die meiste Zeit mit der Fehlersuche. Das ist der
+ Grund, warum jeder Autor von Open-Source Software, der noch bei
+ Sinnen ist, Dir  bestätigen wird, dass ein guter Beta-Tester (
+ der weiß, wie man Symptome präzise beschreibt,
+ Fehlerquellen lokalisiert,  Fehler einer frühen Version
+ toleriert und bereit ist, ein paar Test-Durchläufe zu machen)
+ mehr wert ist als sein Gewicht in Gold aufgewogen. Sogar ein
+ einzelner Beta-Tester  ist manchmal genug
+ um einen erschöpfenden, langatmigen Alptraum in eine lehrreiche
+ Fehlersuche zu verwandeln, die kaum noch ein ärgernis
+ darstellt.
+</p>
+<p>
+ Wenn Du ein Newbie bist, versuche, ein in der Entwicklung steckendes
+ Programm zu finden, welches Dich interessiert, und versuche, ein guter
+ Beta-Tester zu sein. Es ist ein natürlicher Prozess vom
+ Testen eines Programmes, zum Helfen bei der Fehlerbehebung und zum
+ Helfen beim Verändern eines Programmes. Du wirst eine Menge
+ daraus lernen und jede Menge gutes Karma bei den Leuten erzeugen,
+ denen Du geholfen hast und die Dir später auch helfen werden.
+</p>
+
+<h4><a name="respect3"></a>3. Veröffentliche nützliche Informationen</h4>
+
+<p>
+ Eine andere gute Sache ist es, interessante und nützliche
+ Informationen zu sammeln, zu filtern  und diese in Form von
+ Web-Seiten oder FAQs (Frequent Asked Questions &ndash; Häufig
+ gestellte Fragen) allgemein verfügbar zu machen.
+</p>
+<p>
+ Betreuer von großen, technischen FAQs sind fast so hoch
+ angesehen wie Open-Source-Autoren.
+</p>
+
+<h4><a name="respect4"></a>4. Hilf mit die Infrastruktur am Leben zu halten</h4>
+
+<p>
+ Die Hacker-Kultur (und die technische Weiterentwicklung des Internets
+ insbesondere) lebt von der Arbeit von Freiwilligen. Es gibt einen
+ Haufen notwendiger, aber glanzloser Arbeit, die getan werden muß, damit
+ alles weiter gehen kann &ndash; Leiten von Mailing-Listen, Moderieren
+ von Newsgroups, Warten von großen Software-Archiven, Entwickeln
+ von RFCs und anderen technischen Standards.
+</p>
+<p>
+ Leuten, die diese Art von Arbeit gut machen, wird viel Respekt
+ entgegengebracht, weil jeder weiß, dass diese Arbeiten Zeit in
+ großen Massen verschlingen und wohl kaum so viel Spaß
+ machen wie mit Programmcode zu spielen. Diese Arbeit zu tun
+ erfordert echte Hingabe.
+</p>
+
+<h4><a name="respect5"></a>5. Hilf der Hacker-Kultur</h4>
+
+<p>
+ Letztendlich kannst Du helfen, indem Du die
+ Hackergesellschaft propagierst (indem Du z.B. genaue Anleitungen
+ schreibst, wie man ein Hacker werden kann :-)). Dies ist etwas, zu
+ dem Du erst in der Lage sein wirst, wenn Du schon eine Weile dabei
+ und bekannt für eine der ersten vier Dinge geworden bist.
+</p>
+<p>
+ Die Hackerkultur kennt keine Anführer, aber es gibt Helden der
+ Kultur und Stammesälteste und Geschichtsschreiber und
+ Sprecher. Wenn Du lange genug im Schützengraben lagst, mag es
+ sein, dass Du in eine dieser Positionen hinein wächst. Achtung:
+ Hacker mißtrauen zu
+ viel offensichtlichem Selbstbewußtsein bei ihren Oberen,
+ weshalb es gefährlich ist, offenkundig nach diesem Ruhm zu
+ streben. Anstatt dafür zu kämpfen, solltest Du Dich lieber
+ so anstellen, dass er Dir ganz von selbst in den Schoß
+ fällt, und dann sei bescheiden und dankbar für deinen
+ Status.
+</p>
+
+<br/>
+          <div class="mediaobject">
+            <img src="../pics/glider.png" alt="hacker emblem"/>
+          </div>
+
+<h3><a name="nerd_connection"></a>Die Hacker/Nerd-Verbindung</h3>
+
+<p>
+ Aller landläufigen Meinung zum Trotz musst Du kein Nerd
+ sein, um ein Hacker zu sein (Anmerkung des
+ Übersetzers: Nerd ist eine Art Computer-Fanatiker, der sich
+ total von der Außenwelt abschirmt, Computerfreak ist
+ vielleicht die beste Übersetzung). Warum auch immer, es hilft,
+ und viele Hacker sind in der Tat Nerds. Eine Art von sozialem
+ Außenseiter zu sein kann Dir helfen, Dich auf die wichtigen
+ Dingen wie Hacken und Denken zu konzentrieren. 
+</p>
+<p>
+ Aus diesem Grund benutzen viele Hacker die Bezeichnung &quot;Geek&quot;
+ für sich selbst wie eine Art von stolzer Auszeichnung &ndash; es
+ bedeutet für sie oft die Unabhängigkeitserklärung vom
+ sozialen Normalbild der Alltagsgesellschaft (genauso wie die Vorliebe
+ von Hackern für andere Dinge wie z.B. Science-Fiction und
+ Strategiespiele). Die Bezeichnung &quot;Nerd&quot; wurde früher in den
+ 1990er Jahren benutzt, als &quot;Nerd&quot; eine leicht
+ abschätzige und &quot;Geek&quot; eine sehr herbe Bezeichnung
+ war. Um das Jahr 2000 herum wechselten die beiden Begriffe ihren Platz,
+ zumindest in den USA und mittlerweile gibt es eine signifikante Anzahl
+ von Menschen, die sich selbst als &quot;Geeks&quot; bezeichnen, aber
+ keinen direkten Bezug zur Technik haben.
+</p>
+<p>
+  Wenn Du es schaffst, Dich genug aufs Hacken zu konzentrieren, darin
+  gut zu sein und auch noch ein normales Leben zu führen, ist das
+  natürlich super. Dies ist heute viel einfacher als es war, als
+  ich damals 1970 ein Newbie war; die Alltagskultur ist heute viel
+  freundlicher zu Technik-Nerds, als sie es damals war. Es gibt sogar
+  eine steigende Anzahl von Menschen, die bemerken, dass Hacker oft
+  hochqualitatives Material für einen Lebenspartner abgeben.
+</p>
+<p>
+ Wenn Du hacken möchtest, weil Du kein Leben oder keinen Sinn im
+ Leben hast, ist das auch in Ordnung &ndash; Du wirst wenigstens nie
+ das Problem haben, dass Du Dich nicht mehr konzentrieren
+ kannst. Vielleicht wirst Du später deinen Zugang zum Leben,
+ vielleicht sogar durchs Hacken, finden.
+</p>
+
+<br/>
+          <div class="mediaobject">
+            <img src="../pics/glider.png" alt="hacker emblem"/>
+          </div>
+
+<h3><a name="style"></a>Fragen des Stils</h3>
+
+<p>
+ Nochmal, um ein Hacker zu sein, musst Du die Gedankenwelt der Hacker
+ betreten. Es gibt ein paar Sachen, die Du tun kannst, wenn Du keinen
+ Zugang zu einem Computer hast. Sie sind kein Ersatz für das
+ Hacken (es gibt nichts, was wirklich ein Ersatz
+ wäre), aber viele Hacker tun sie und haben das Gefühl, dass
+ diese Dinge eine Art besitzen, die sie dem Hacken verwandt macht.
+</p>
+<a name="do_this"></a>
+<div class="itemizedlist">
+ <ul type="disc">
+  <li>
+    <p>
+       Lerne, in deiner Muttersprache sehr gut zu schreiben. Obwohl es
+       ein weit verbreitetes Voruteil ist, dass Programmierer
+       schlechte Autoren sind, sind eine überraschende Zahl von
+       Hackern, (inklusive der Besten, die ich kenne) fähige Schreiber.
+    </p>
+  </li>
+  <li>
+    <p>
+      Lies Science-Fiction-Bücher und besuche
+      Science-Fiction-Kongresse (ein guter Weg, Hacker und
+      zukünftige Hacker zu treffen).
+    </p>
+  </li>
+
+  <li>
+    <p>Trainiere eine Kampfsportart. Die Form der geistigen
+     Disziplin, die bei Kampfsportarten benötigt wird,
+     scheint in wichtigen Arten vergleichbar zu sein mit dem was
+     Hacker tun. Die bei Hackern populärsten Formen sind
+     definitiv die asiatischen, waffenlosen Kampftechniken wie z.B.Tae
+     Kwon Do, unterschiedliche Formen von Karate, Judo, Kung Fu,
+     Aikido, oder Ju Jitsu. Westliches Fechten und Asiatische
+     Schwertkampfkunst haben auch ihre Anhänger. An den Orten, wo
+     es erlaubt ist, erfreut sich 
+     Pistolenschießen seit dem Ende der 90er Jahre einer
+     wachsenden Popularität. Die hackerartigsten
+     Kampfkünste sind diejenigen, die ihren Schwerpunkt auf
+     geistige Disziplin, entspanntes Bewusstsein und Kontrolle legen
+     anstatt auf pure Kraft, Athletik oder körperliche Belastbarkeit.
+    </p>
+  </li>
+  <li>
+    <p>Studiere eine konkrete Meditationsdisziplin. Der beständigste
+    Favorit unter den Hackern ist Zen (das Wichtigste ist, dass es
+    möglich ist von Zen zu profitieren,
+    ohne eine Religion anzunehmen oder abzulegen,
+    falls Du schon eine hast). Andere Varianten können auch funktionieren,
+    aber sei vorsichtig, dass du keine wählst, die erfordert, dass
+    Du verrückte Dinge glaubst.
+   </p>
+  </li>
+  <li>
+    <p>
+      Entwickle ein analytisches Ohr für Musik. Lerne
+      einzigartige Arten von Musik einzuschätzen. Lerne ein
+      musikalisches Instrument zu beherrschen oder wie man singt.
+    </p>
+  </li>
+  <li>
+    <p>
+      Entwickle Verständnis für Wortspiele.
+    </p>
+  </li>
+ </ul>
+</div>
+
+<p>
+ Je mehr Du von diesen Dingen bereits tust, desto wahrscheinlicher ist
+ es, dass Du von Natur aus ein Hacker bist oder dafür
+ veranlagt bist. Warum es gerade diese Dinge sind, ist bis heute nicht
+ genau geklärt, aber sie scheinen mit einer Kombination aus
+ Denkprozessen der rechten und linken Gehirnhälfte zu tun zu
+ haben, welche wichtig zu sein scheinen; Hacker sind gezwungen, sowohl
+ logisch zu begründen als auch in der Lage zu sein, aus der
+ unmittelbaren Logik der momentanen Betrachtung des Problems
+ auszuscheren.
+</p>
+<p>
+ Arbeite so intensiv, wie Du spielst und spiele so intensiv, wie Du
+ arbeitest. Für echte Hacker scheint die Grenze zwischen
+ &quot;Spiel&quot;, &quot;Arbeit&quot;, &quot;Wissenschaft&quot; und
+ &quot;Kunst&quot; zu verschwinden, oder sie verschmelzen zu einer
+ höherwertigen Spielerei. Deshalb beschränke Dich nicht auf
+ eine kleine Auswahl von Fähigkeiten. Obwohl die meisten Hacker
+ sich selbst als Programmierer bezeichnen, sind sie in den meisten
+ Fällen mehr als kompetent in mehreren verwandten
+ Fähigkeiten &ndash; Systemadministration, Webdesign und
+ PC-Hardware-Problembehebung sind die bekanntesten. Ein Hacker, der
+ als Systemadministrator arbeitet, ist auf der anderen Seite meistens
+ ein fähiger Skriptprogrammierer und Webdesigner. Hacker machen
+ keine halben Sachen; wenn sie Zeit in eine Fähigkeit
+ investieren, dann wollen sie darin auch sehr gut werden.
+</p>
+<p>
+ <a name="not_to_do"></a>
+ Schließlich noch ein paar Dinge, welche Du
+  <span class="emphasis"><em>nicht</em></span> tun solltest:
+</p>
+
+<div class="itemizedlist">
+  <ul type="disc">
+   <li>
+     <p>
+       Benutze keine dummen, grandiosen Benutzer- oder Spitznamen.
+     </p>
+   </li>
+   <li>
+     <p>
+       Laß Dich nicht in FlameWars im Usenet (oder sonst wo)
+       verwickeln.
+     </p>
+   </li>
+   <li>
+     <p>
+       Nenne Dich nicht selbst einen &quot;Cyberpunk&quot;, und
+       verschwende keine Zeit mit irgend jemanden, der sich so nennt.
+     </p>
+   </li>
+   <li>
+     <p>
+       Schreibe keine e-Mails oder News-Beiträge, die voll von
+       Rechtschreibfehlern oder schlechter Grammatik sind. (Anmerkung
+       des Übersetzers: Tschuldigung..., ich arbeite daran!)
+     </p>
+   </li>
+  </ul>
+</div>
+
+<p>
+ Das Einzige, was man Dir zuteil machen wird, ist Spott, wenn Du Dich
+ so verhältst. Hacker vergessen nicht so schnell &ndash; es
+ könnte Jahre dauern, bis Du es wieder ausgeglichen hast und
+ akzeptiert wirst.
+</p>
+<p>
+ Das Problem mit Benutzer- und Spitznamen bedarf einer näheren
+ Erklärung. Das Verstecken Deiner Indentität hinter einem
+ Spitzname ist ein kindisches und dummes charakteristisches Verhalten von
+ Crackern, warez doodez, Haxorz und anderen niedrigen Lebensformen. Hacker tun
+ dies nicht; sie sind stolz auf das, was sie tun, und wollen damit mit
+ ihrem <span class="emphasis"><em>realen</em></span> Namen in
+ Verbindung gebracht werden. Falls Du einen Spitznamen hast, dann wirf ihn
+ weg. In der Hacker-Kultur wird es Dich nur als Verlierer
+ kennzeichnen.
+</p>
+
+<br/>
+          <div class="mediaobject">
+            <img src="../pics/glider.png" alt="hacker emblem"/>
+          </div>
+
+<h3><a name="resources"></a>Zusätzliche Quellen</h3>
+
+<p>
+ Paul Graham hat einen Aufsatz mit dem Titel <a href="http://www.paulgraham.com/gh.html" target="_top">Great
+ Hackers</a> veröffentlicht, und einen weiteren <a
+ href="http://www.paulgraham.com/college.html">Undergraduation</a> in
+ dem er viel Wahres schreibt.
+</p>
+<p>
+ Peter Seebach wartet ein exzellentes <a
+ href="http://www.plethora.net/~seebs/faqs/hacker.html" target="_top">Hacker FAQ</a> 
+ für Manager, die endlich mal wissen wollen, wie sie mit Hacker
+ umgehen sollten. Wenn Peters Seite nicht antwortet, dann solltest Du
+ hier <a href="http://search.excite.com/search.gw?search=%22HACKER%2BFAQ%22%2B%2Bseebach%26tsug=-1%26c%2Bsug=10" target="_top">Excite search</a>
+  eine Kopie finden.
+</p>
+<p>
+ Es gibt ein Dokument, das
+ <a href="http://samizdat.mines.edu/howto/HowToBeAProgrammer.html" target="_top">
+ How To Be A Programmer</a>  heißt und ein
+ exzellentes Gegenstück zu diesem hier ist. Es gibt wertvolle
+ Hinweise nicht nur zum Thema Programmieren und
+ Programmierfähigkeiten, sondern auch darüber, wie man in
+ einem Team von Programmierern zu funktionieren hat.
+</p>
+<p>
+ Ich habe außerdem <a
+ href="http://www.catb.org/~esr/faqs/hacker-hist.html"><em>A brief History
+ of Hackerdom</em></a> geschrieben.
+</p>
+<p>
+ Ich habe einen Aufsatz geschrieben,
+ <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/index.html" target="_top">
+ <em>Die Kathedrale und der Basar</em></a>, der erklärt, wie die Linux-
+ und OpenSource-Kultur arbeitet. In dessen Nachfolgedokument
+ <a href="http://catb.org/~esr/writings/homesteading/" target="_top">
+ <em>Homesteading the Noosphere</em></a>
+ bin ich noch direkter auf dieses Thema eingegangen.
+</p>
+<p>
+ Rick Moen hat ein exzellentes Dokument zu dem Thema
+ <a href="http://linuxmafia.com/faq/Linux_PR/newlug.html" target="_top">
+ Wie leite ich eine Linux User Group(LUG)</a> verfasst.
+</p>
+<p>
+ Rick Moen und ich haben zusammen <a
+ href="http://catb.org/~esr/faqs/smart-questions.html"
+ target="_top">Wie stellt man klevere Fragen</a> geschrieben. Dieses
+ Dokument wird Dir dabei helfen, Unterstüzung so zu suchen, dass
+ Du sie auch wirklich bekommst.
+</p>
+<p>
+ Wenn Du grundlegende Dinge wissen möchtest, wie Computer, Unix
+ und das Internet arbeiten, dann schau Dir <a
+ href="http://en.tldp.org/HOWTO//Unix-and-Internet-Fundamentals-HOWTO/"
+ target="_top">The Unix and Internet Fundamentals HOWTO</a> an.
+</p>
+<p>
+ Wenn Du Software oder Patches für Software veröffentlichen
+ möchtest, dann versuche dich, an diesen Richtlinien, den
+ <a href="http://en.tldp.org/HOWTO/Software-Release-Practice-HOWTO/index.html" target="_top">
+ Software Release Practice HOWTO</a>, zu orientieren.
+</p>
+<p>
+ Wenn Dir das Zen Gedicht gefallen hat, dann interessiert dich
+ vielleicht <a href="http://catb.org/~esr//writings/unix-koans"
+ target="_top">Rootless Root: The Unix Koans of Master Foo</a>.
+</p>
+
+<br/>
+          <div class="mediaobject">
+            <img src="../pics/glider.png" alt="hacker emblem"/>
+          </div>
+
+<h3><a name="FAQ"></a>Häufig gestellte Fragen</h3>
+
+<div class="qandaset">
+ <dl>
+   <dt>Q:. <a href="#hacker_already">Woher weiß ich, ob ich schon ein Hacker bin?</a></dt>
+   <dt>Q:. <a href="#teach_hack">Wirst Du mir beibringen, wie man hackt?</a></dt>
+   <dt>Q:. <a href="#getting_started">Wie kann ich denn sonst anfangen?</a></dt>
+   <dt>Q:. <a href="#when_start">Wann soll ich anfangen? Ist es schon zu spät um es zu lernen?</a></dt>
+   <dt>Q:. <a href="#how_long">Wie lange wird es dauern, bis ich gelernt habe wie man hackt?</a></dt>
+   <dt>Q:. <a href="#closed_lang">Ist Visual Basic eine gute Programmiersprachen um anzufangen?</a></dt>
+   <dt>Q:. <a href="#I_want_to_crack_and_Im_an_idiot">Würdest Du mir helfen, ein System zu cracken, oder mir beibringen, wie man ein System hackt?</a></dt>
+   <dt>Q:. <a href="#passwords">Wie komme ich an das Passwort eines anderen Benutzers?</a></dt>
+   <dt>Q:. <a href="#crackmail">Wie kann ich die Emails eines anderen Benutzers lesen?</a></dt>
+   <dt>Q:. <a href="#crackop">Wie kann ich Channel Op im IRC bekommen?</a></dt>
+   <dt>Q:. <a href="#anti_crack">Ich wurde gecrackt. Wirst Du mir helfen, damit das in Zukunft nicht mehr passiert?</a></dt>
+   <dt>Q:. <a href="#windows_grief">Ich habe Probleme mit meiner Windows-Software. Wirst Du mir helfen?</a></dt>
+   <dt>Q:. <a href="#real_hackers">Wo kann ich echte Hacker finden, um mit ihnen zu reden?</a></dt>
+   <dt>Q:. <a href="#books">Kannst Du mir brauchbare Bücher empfehlen, die mit Hacken zu tun haben?</a></dt>
+   <dt>Q:. <a href="#mathematics">Muss ich gut in Mathematik sein um ein Hacker zu werden?</a></dt>
+   <dt>Q:. <a href="#language_first">Welche Sprache sollte ich zuerst lernen?</a></dt>
+   <dt>Q:. <a href="#hardware">Welche Hardware brauche ich?</a></dt>
+   <dt>Q:. <a href="#started2">Ich möchte etwas beitragen. Kannst Du mir dabei helfen, ein Problem zu finden an dem ich arbeiten kann?</a></dt>
+   <dt>Q:. <a href="#MS_hater">Muss ich Microsoft hassen und schädigen?</a></dt>
+   <dt>Q:. <a href="#no_living">Hindert Open-Source nicht Programmierer daran ihren Lebensunterhalt zu verdienen?</a></dt>
+   <dt>Q:. <a href="#problems">Woher bekomme ich eine freie Unix-Version?</a></dt>
+ </dl>
+
+ <table border="0" summary="Fragen und Antworten">
+  <col align="left" width="1%"/>
+
+  <tbody>
+   <tr class="question">
+    <td align="left" valign="top"><a name="hacker_already"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Woher weiß ich, ob ich schon ein Hacker bin?</p>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+    <td align="left" valign="top">
+    <p>
+      Stelle dir selbst die folgenden drei Fragen:
+      <ul type="disc">
+       <li><p>Sprichst Du eine Programmiersprache fließend?</p></li>
+       <li><p>Identifizierst du dich mit den Zielen und Werten der Hacker-Gemeinschaft?</p></li>
+       <li><p>Wurdest du von einem etablierten Mitglied der Hacker-Gemeinschaft schon jemals als Hacker bezeichnet?</p></li>
+      </ul>
+      <p>
+       Wenn du diese <em>drei</em> Fragen alle mit ja beantworten
+       kannst, dann bist du bereits ein Hacker. Zwei von den drei sind
+       nicht ausreichend.
+      </p>
+      <p>
+       In der ersten Frage geht es um Fachwissen. Du schaffst diesen
+       Test eventuell, wenn du ein Minimum des technischen Fachwissens
+       besitzt, das weiter oben in diesem Dokument beschrieben
+       wurde. Dieser Test ist absolut einfach, wenn bereits eine
+       nennenswerte Menge von deinem Code von einem Open-Source Projekt
+       akzeptiert wurde.
+      </p>
+      <p>
+       In der zweiten Frage geht es um deine Einstellung. Wenn die <a
+       href="#attitude" title="The Hacker Attitude">fünf Prinzipien
+       des Hacker Gedankenguts</a> offensichtlich für dich sind,
+       mehr in der Art einer Beschreibung der Art und Weise wie du
+       bereits lebst als etwas Neues, dann bist du bereits auf dem
+       halben Weg zu bestehen. Das ist die eine Hälfte; die andere
+       Hälfte ist der Grad deiner Identifikation mit den
+       langfristigen Projekten der Hacker-Gemeinschaft.
+      </p>
+      <p>
+       Hier ist eine unvollständige, aber beispielhafte Liste von
+       ein paar solcher Projekte: Ist es wichtig für dich, dass
+       Linux besser wird und sich verbreitet? Bist du begeistert wenn es
+       um Software Freiheit geht? Feindselig gegenüber Monopolen?
+       Handelst du nach dem Grundsatz, dass der Computer ein Instrument
+       ist, das die Macht hat, die Welt reicher und menschenfreundlicher
+       zu machen?
+      </p>
+      <p>
+       Aber ein Warnhinweis ist hier durchaus angebracht. Die
+       Hacker-Gemeinschaft hat ein paar spezielle, im Wesentlichen
+       defensive politische Interessen &ndash; zwei davon sind zum einen
+       die Verteidigung der Meinungsfreiheit und zum Anderen die
+       Bekämpfung von &qout;Intellektuellem Eigentum&qout;. Zwei
+       Punkte, die Open Source illegal machen. Einige dieser
+       Langzeitprojekte sind Gesellschaften Bürgerlichen Rechts wie
+       z.B. die Electronic Frontier Foundation,	die nach Außen
+       sichtbare Einstellung beinhaltet Unterstützung
+       dafür. Darüber hinaus sehen Hacker die Versuche die
+       Hacker Einstellung in ein konkretes politisch Programm zu fassen
+       mit Argwohn. Wir haben auf die harte Art gelernt, dass diese
+       Versuche zur Zersplitterung und Desinteresse führen.
+       Wenn jemand versucht, Dich im Namen der Hackergesinnung für
+       einen Marsch auf das Kapitol zu rekrutieren, dann hat er etwas
+       nicht verstanden. Die richtige Antwort darauf ist
+       möglicherweise &ndash;<span class="quote">Halt den Mund und
+       zeige ihnen den Code.</span>&ndash;
+      </p>
+      <p>
+       Die dritte Frage beinhaltet eine kniffelige Rekursion. Ich habe
+       in dem <a href="#what_is" title="Was ist ein Hacker?">Abschnitt
+       &qout;Was ist ein Hacker?&quot;</a> beobachtet, dass ein Hacker
+       sein auch zum Teil auch eine Frage von Zugehörigkeit zu
+       einer bestimmten Subkultur oder einem sozialen Netzwerk mit einer
+       gemeinsamen Geschichte. Vor langer Zeit waren Hacker eine nicht
+       so geschlossene und selbstbewusste Gruppe, wie sie es heute
+       sind. Aber die Wichtigkeit des Aspektes von sozialen Netzwerken
+       hat über die letzten dreißig Jahre zugenommen, da das
+       Internet es einfacher gemacht hat Verbindungen mit dem Kern der
+       Hacker Subkultur zu Entwickeln und zu Pflegen. Ein einfacher
+       Hinweis auf diese änderung ist, dass wir in diesem
+       Jahrhundert unsere eigenen T-Shirts besitzen.
+      </p>
+      <p>
+       Soziologen, die Netzwerke wie die Hacker-Gemeinde unter der
+       Rubrik &qout;unsichtbare Schule&qout; untersuchen, haben
+       festgestellt, dass ein Merkmal dieser Netzwerke ist, dass sie
+       Türsteher haben &ndash; Kernmitglieder, die über
+       die soziale Autorität verfügen, neue Mitglieder in
+       das Netzwerk aufzunehmen. Aufgrund der Tatsache, dass die
+       Hacker-Gemeinschaft eine &qout;unsichtbare Schule&qout;darstellt, die 
+       lose und informell ist, hat auch der Türsteher eine
+       informelle Rolle. Aber eine Sache, die allen Hackern in den
+       Knochen steckt, ist das Wissen, dass nicht jeder Hacker ein
+       Türsteher ist. Türsteher müssen ein gewisses
+       Dienstalter erreicht und eine gewisse Leistung erbracht haben,
+       bevor sie diesen Titel verliehen bekommen. Wie viel das ist, ist
+       schwer zu sagen, aber jeder Hacker wird es wissen, wenn er es sieht.
+      </p>
+    </p>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="teach_hack"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Wirst Du mir beibringen, wie man hackt?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Seit der ersten Veröffentlichung dieser Seite habe ich
+     jede Woche mehrere Anfragen (oft mehrere am Tag) von Leuten bekommen, die
+     mich bitten &quot;bring mir alles übers Hacken bei&quot;. 
+     Unglücklicherweise habe ich weder genug Zeit, noch Energie
+     dafür. Meine eigenen Hacker-Projekte und die Arbeit als
+     Open-Source-Botschafter verbrauchen 110% meiner Zeit.
+    </p>
+    <p>
+     Selbst wenn ich Zeit und Muße hätte, Hacken ist eine
+     Einstellung und eine Fertigkeit, die Du Dir einfach selbst
+     beibringen musst. Du wirst herausfinden, dass echte Hacker
+     bereit sind, Dir zu helfen, Du darfst nur nicht erwarten, dass sie
+     Dich respektieren, wenn Du darum bettelst, all ihr Wissen mit dem
+     Löffel gefüttert zu bekommen.
+    </p>
+    <p>
+     Lerne zuerst ein paar Dinge. Zeig, das Du es wirklich versuchst,
+     zeig, dass Du wirklich fähig bist, selbständig zu
+     lernen. Dann gehe zu den den Hackern, die Du triffst, und stelle
+     ihnen konkrete Fragen.
+    </p>
+    <p>
+     Wenn Du einem Hacker eine Email schreibst, um ihn um Rat zu
+     fragen, dann sage ich Dir hier zwei Dinge, die Du wissen
+     musst. Erstens: Wir haben herausgefunden, dass Leute, die zu
+     bequem und nachlässig beim Schreiben sind, normalerweise
+     auch zu bequem und nachlässig zum Nachdenken sind, als dass sie
+     gute Hacker werden könnten &ndash; deshalb achte darauf,
+     dass Du korrekt schreibst, und benutze richtige Grammatik und
+     Interpunktion. Andernfalls kann es passieren, dass Du ignoriert
+     wirst. Zweitens: <span class="emphasis"><em>Wage</em></span> es
+     nicht mal danach zu fragen, ob die Antwort an eine andere
+     Email-Adresse geschickt werden kann, als die, von der Du die Mail
+     geschickt hast. Wir halten solche Leute, die so etwas tun,
+     im Allgemeinen für Diebe, die gestohlene Benutzerkonten
+     benutzen, und wir haben kein interesse daran, Diebstahl zu
+     unterstützen.
+    </p>
+    <p>
+     (Anmerkung des Übersetzers: Bitte fragt auch mich nicht, wie
+     man ein Hacker wird, 1. bin ich keiner, 2. bin ich schon dabei,
+     alles, was ich über Computer und Programmierung weiß,
+     hier auf diesen Seiten zu veröffentlichen.)
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="getting_started"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Wie kann ich denn sonst anfangen?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Der beste Weg um anzufangen ist sicherlich, wenn Du zu einem
+     Treffen einer Linux User Group (LUG) gehst. Du kannst eine solche
+     Gruppe hier <a href="http://www.tldp.org/links/index.html"
+     target="_top">LDP General Linux Information Page</a>
+     finden. Möglicherweise gibt es sogar eine ganz in Deiner
+     Nähe, möglicherweise in Deiner Universität oder
+     Hochschule. Die Mitglieder der LUG können dir sicher eine
+     Linux-Version geben, wenn Du danach fragst, und helfen Dir auch
+     dabei, es zu installieren und zum Laufen zu bekommen.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="when_start"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Wann soll ich anfangen? Ist es schon zu spät, um es zu lernen?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Jedes Alter, in dem Du motiviert bist anzufangen, ist das richtige
+     Alter. Die meisten Leute scheinen im Alter von 15 bis 20 Jahren
+     zu beginnen, aber ich kenne Ausnahmen in beide Richtungen.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="how_long"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Wie lange wird es dauern, bis ich gelernt habe wie man hackt?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Das hängt zum einen von Deinem Talent und zum anderen davon
+     ab, wie hart Du arbeitest. Die meisten Leute die es versuchen erreichen
+     respektable Fähigkeiten innerhalb von achtzehn Monaten bis zwei
+     Jahre, wenn sie konzentriert daraufhin arbeiten. Aber glaube
+     nicht, dass es da aufhört, denn beim Hacken (wie auch in
+     vielen anderen Bereichen) braucht man zehn Jahre um Perfektion zu
+     erlangen. Und wenn Du ein echter Hacker bist,
+     wirst Du den Rest Deines Lebens damit verbringen zu lernen und
+     deine Fähigkeiten zu perfektionieren.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="closed_lang"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Ist Visual Basic eine gute Programmiersprachen um anzufangen?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Wenn Du so eine Frage stellst, ist meistens klar, dass Du
+     versuchst, unter Windows zu hacken. Das ist für sich genommen
+     schon eine schlechte Idee. Ich habe nicht gescherzt, als ich den
+     Versuch, unter Windows zu hacken wollen, damit verglichen habe zu
+     versuchen, mit einem Gipsverband tanzen lernen zu wollen. Mach das
+     nicht. Es ist hässlich und es hört nicht auf
+     hässlich zu sein.
+    </p>
+    <p>
+     Es gibt ganz bestimmte Probleme mit Visual Basic;
+     hauptsächlich, dass sie nicht portabel ist. Obwohl es
+     Prototypen von OpenSource-Implementierungen dieser Sprache
+     gibt, decken die benutzbaren ECMA Standards nicht mehr als einen
+     kleinen Teil ihres Programmier-Interfaces (API). Unter Windows
+     ist die Unterstützung der meisten Bibliotheken
+     proprietär an einen Hersteller gebunden (Microsoft); wenn Du
+     nicht <span class="emphasis"><em>extrem</em></span> vorsichtig
+     bist &ndash; vorsichtiger als ein Anfänger normalerweise
+     fähig ist zu sein &ndash; wirst Du auf den Plattformen
+     gefangen sein, die Microsoft bereit ist zu
+     unterstützen. Wenn Du Dich mit Unix beschäftigst,
+     bekommst Du bessere Programmiersprachen mit besseren
+     Bibliotheken. Zum Beispiel Python.
+    </p>
+    <p>
+     Ebenso wie auch andere Basic-Dialekte ist Visual Basic eine
+     einfach entworfene Sprache, die schlechte
+     Programmierpraktiken lehrt. Nein, bitte mich
+     <span class="emphasis"><em>nicht</em></span>, diese im Detail zu
+     erklären. Diese Erklärungen würden Bücher
+     füllen. Lerne lieber eine sauber konzipierte Sprache.
+    </p>
+    <p>
+     Eine dieser schlechten Eigenschaften ist die Abhängigkeit
+     von Bibliotheken, Widgets und Entwicklungswerkzeugen eines
+     einzelnen Herstellers. Im Allgemeinen ist jede Programmiersprache,
+     die nicht unter Linux oder einem der BSDs und/oder wenigsten von
+     drei verschiedenen Betriebssystemherstellern voll unterstüzt wird,
+     eine Sprache, die es sich nicht zu lernen lohnt um darin zu hacken.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="I_want_to_crack_and_Im_an_idiot"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Würdest Du mir helfen, ein System zu cracken, oder mir beibringen, wie man ein System hackt?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Nein. Jeder der solch eine Frage stellt, nachdem er diese FAQ
+     gelesen hat, ist zu dumm, um etwas gelehrt zu bekommen, selbst
+     wenn ich die Zeit hätte zu lehren. Jede Email mit solch
+     einer Frage wird entweder ignoriert oder sehr rüde beantwortet.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="passwords"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Wie komme ich an das Passwort eines anderen Benutzers?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Das ist cracken. Geh weg, Idiot.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="crackmail"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Wie kann ich die Emails eines anderen Benutzers lesen?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Das ist cracken. Verschwinde, Depp.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="crackop"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Wie kann ich Channel Op im IRC bekommen?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Das ist cracken. Hinfort, Cretin.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="anti_crack"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Ich wurde gecrackt. Wirst Du mir helfen, damit das in Zukunft nicht mehr passiert?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Nein. Jedes mal, wenn jemand mit dieser Frage bisher zu mir kam,
+     stellte sich heraus, dass er ein armer Kerl war, der Microsoft
+     Windows benutzt hat. Es ist nicht möglich, ein Windowssystem
+     effektiv gegen Crackerangriffe zu schützen. Der Code und die
+     Architektur haben einfach zu viele Schwächen. Der Versuch
+     Windows sicher zu machen ist so, wie wenn man versuchen
+     würde, mit einem Sieb das Wasser aus einem Boot zu
+     schaufeln. Die einzige sichere Vorbeugung besteht darin, auf
+     Linux oder ein anderes Betriebssystem zu wechseln, das so
+     entworfen wurde, dass Sicherheit möglich ist.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="windows_grief"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Ich habe Probleme mit meiner Windows-Software. Wirst Du mir helfen?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Ja. Wechsle in den DOS-Modus und tippe &quot;format
+     C:&quot;. Alle Probleme, die Du hattest, werden innerhalb weniger
+     Minuten verschwunden sein.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="real_hackers"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Wo kann ich echte Hacker finden, um mich mit ihnen zu unterhalten?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Der beste Weg ist es, eine UNIX- oder Linux-Benutzergruppe in
+     deiner Nähe zu finden und zu ihren Treffen zu gehen (es gibt
+     ein Verzeichnis unter <a href="http://www.tldp.org" target="_top">LDP</a>). 
+    </p>
+    <p>
+     (Früher sagte ich hier immer: Du wirst im IRC (Internet
+     Relay Chat) keine echten Hacker finden, aber ich muss zugeben,
+     dass sich das geändert hat. Mittlerweile gibt es einige
+     richtige Hacker-Gemeinschaften, die sich mit Dingen wie GIMP oder
+     Perl befassen und eigene IRC-Kanäle betreiben.)
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="books"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Kannst Du mir brauchbare Bücher empfehlen, die mit Hacken zu tun haben?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Ich verwalte ein <a
+     href="http://en.tldp.org/HOWTO/Reading-List-HOWTO/index.html"
+     target="_top">Linux Reading List HOWTO</a>, das Dir vielleicht
+     weiter hilft. Das <a href="http://www.catb.org/~esr/faqs/loginataka.html"
+     target="_top">Loginataka</a> könnte ebenfalls interessant
+     für Dich sein.
+    </p>
+    <p>
+     Eine Einführung in Python findest Du unter <a
+     href="http://www.python.org/doc/Intros.html"
+     target="_top">Einführungen</a> auf der Python-Seite.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="mathematics"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Muss ich gut in Mathematik sein, um ein Hacker zu werden?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Nein. Hacken benötigt sehr wenig formale Mathematik oder
+     Arithmetik. Insbesondere brauchst Du normalerweise keine
+     Trigonometrie oder Analysis (Ausgenommen eine handvoll von speziellen
+     Anwendungen für Bereiche wie
+     z.B. 3-D Computergraphik). Kenntnisse in formaler Logik und Bool'scher
+     Algebra sind gut. Einige Grundlagen der finiten Mathematik
+     (einschließlich Finite Elemente, Kombinatorik und
+     Graphentheorie) können aber hilfreich sein.
+    </p>
+    <p>
+     Wesentlich wichtiger: Du solltest in der Lage sein logisch zu
+     denken und Argumentationsketten zu folgen, wie es Mathematiker
+     tun. Auch wenn Dir der Inhalt der meisten Mathematik nicht weiter hilft,
+     wirst Du Disziplin und Intelligenz brauchen, um mit dieser
+     Mathematik umzugehen. Wenn Dir diese Intelligenz fehlt, gibt es
+     für Dich wenig Hoffnung, ein Hacker zu werden. Wenn Dir die
+     Disziplin fehlt, dann erarbeite sie Dir.
+    </p>
+    <p>
+     Ich denke, ein guter Weg um herauszufinden, ob Du hast, was man
+     braucht, ist das Buch <em>What Is The Name Of This Book?</em> von
+     Raymond Smullyan. Smullyans spielerische Logikrätsel
+     entsprechen sehr dem Hacker-Geist. Wenn man in der Lage ist, diese
+     Rätsel zu lösen, ist das ein gutes Zeichen; wenn man es
+     <em>genießt</em>, diese Rätsel zu lösen ist das ein
+     noch besseres Zeichen.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="language_first"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Welche Sprache sollte ich als erste lernen?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     XHTML (den neusten Dialekt von HTML), wenn Du es nicht bereits kannst.
+     Es gibt Unmengen an bunten, hype-intensiven <span
+     class="emphasis"><em>schlechten</em></span> HTML-Büchern da
+     draußen, und besorgniserregend wenig gute. Ich empfehle: <a
+     href="http://www.oreilly.com/catalog/html5/"
+     target="_top"><em>HTML: The Definitive Guide</em></a>.
+     (Anmerkung des Übersetzers: Oder Online unter <a href="http://de.selfhtml.org">Selfhtml</a>.)
+    </p>
+    <p>
+     HTML ist keine vollwertige Programmiersprache. Wenn Du
+     bereit bist, mit echter Programmierung zu beginnen, würde
+     ich empfehlen, mit <a href="http://www.python.org/"
+     target="_top">Python</a> zu beginnen. Du wirst von vielen Leuten
+     den Rat hören, mit Perl zu beginnen, und Perl ist
+     populärer als Python, aber es ist schwerer zu lernen und (meiner
+     Meinung nach) weniger gut entworfen.
+    <p>
+     C ist sehr wichtig, ist aber auch sehr viel schwerer als Python
+     oder Perl. Versuche nicht damit zu beginnen.
+    </p>
+    <p>
+     Windowsbenutzer sollten <span
+     class="emphasis"><em>nicht</em></span> auf Visual Basic
+     setzen. Es lehrt Dich schlechte Angewohnheiten und man kann es
+     nicht auf andere Plattformen portieren. Vermeide es.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="hardware"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Welche Hardware brauche ich?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Es gab eine Zeit, in der PC nicht sehr leistungsfähig waren
+     und wenig Arbeitsspeicher hatten, so wenig, dass sie dem Hacker
+     künstliche Grenzen in seinem Lernprozeß
+     aufzwangen. Das ist seit Mitte der 90er Jahre nicht mehr so; eine
+     Maschine der Größenordnung Intel 486DX50 ist
+     leistungsfähig genug für Softwareentwicklung, X sowie
+     einen Internetzugang, und selbst die kleinsten Festplatten, die
+     man heute zu kaufen bekommt, bieten ausreichend Platz.
+    </p>
+    <p>
+     Das entscheidende Kriterium bei der Auswahl eines Computers ist,
+     ob dessen Hardware Linux-kompatibel (oder BSD-kompatibel, falls
+     Du Dich für diesen Weg entscheidest) ist. Nochmal, das
+     Gesagte gilt für fast alle modernen Computer. Der einzige
+     richtig problematische Bereich sind Modems und WLAN-Karten. Einige
+     Computer werden mit Windows-spezifischer Hardware geliefert, die unter Linux nicht läuft.
+    </p>
+    <p>
+     Es gibt eine Hardware-Kompatibilitäts-FAQ; die aktuellste Version
+     gibt es <a href="http://en.tldp.org/HOWTO/Hardware-HOWTO/index.html"
+     target="_top">hier</a>. 
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="started2"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Ich möchte etwas beitragen. Kannst Du mir dabei helfen, ein Problem zu finden an dem ich arbeiten kann?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Nein, denn ich kenne weder Deine Talente noch Deine Interessen. Du
+     musst selbst motiviert sein oder Du wirst nicht lange dabei
+     bleiben. Das ist der Grund, warum es meistens nicht funktioniert,
+     wenn andere Leute Dir Deine Richtung vorgeben sollen.
+    </p>
+    <p>
+     Probiere folgendes: Beobachte die Projekt-Ankündigungen bei <a
+     href="http://freshmeat.net" target="_top">Freshmeat</a> für
+     ein paar Tage. Wenn Du eines entdeckst, wo du denkst &quot;Cool!
+     Daran möchte ich mitarbeiten!&quot;, dann beteilige Dich.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="MS_hater"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Muss ich Microsoft hassen und schädigen?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Nein, musst Du nicht. Nicht dass Microsoft nicht widerlich
+     wäre, aber die Hacker-Kultur gab es lange vor Microsoft
+     und wird noch da sein, wenn Microsoft bereits Geschichte
+     ist. Jede Energie, die Du verbrauchst, um Microsoft zu hassen, ist
+     besser genutzt, wenn Du Deine Fähigkeiten liebst. Schreibe
+     guten Code &ndash; das schadet Microsoft mehr als genug, ohne Dein
+     Karma zu verschmutzen.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="no_living"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Hindert Open-Source nicht Programmierer daran ihren Lebensunterhalt zu verdienen?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Das ist unwahrscheinlich &ndash; es ist wohl eher so, dass die
+     Open-Source Softwareindustrie eher Jobs schafft anstatt sie
+     wegzunehmen. Wenn ein geschriebenes Programm ökonomisch
+     einen Gewinn erbringt, wird ein Programmierer bezahlt werden, ganz
+     egal, ob das Programm als Open-Source veröffentlicht wird
+     oder nicht. Und unabhängig davon wieviel &quot;freie&quot;
+     Software geschrieben wird, es wird immer einen Bedarf an neuer
+     und angepasster Software geben. Zu diesem Thema habe ich auf den
+     <a href="http://www.opensource.org" target="_top">Open Source</a>
+     Seiten geschrieben.
+    </p>
+    </td>
+   </tr>
+
+   <tr class="question">
+    <td align="left" valign="top"><a name="problems"></a><b>F:.</b></td>
+
+    <td align="left" valign="top"><p>Woher bekomme ich eine freie UNIX-Version?</p>
+    </td>
+   </tr>
+
+   <tr class="answer">
+    <td align="left" valign="top"><b>A:.</b></td>
+
+    <td align="left" valign="top">
+    <p>
+     Wenn du noch kein Unix auf deiner Maschine installiert
+     hast, dann habe ich auf dieser Seite einige Hinweise eingebaut, wie
+     man an das meist genutzte freie Unix rankommt. Um ein Hacker zu
+     sein, brauchst Du Motivation, Initiative, sowie die Eigenschaft
+     eigenständig zu lernen. Fang jetzt an...
+    </p>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+</div>
+
+<br/>
+          <div class="mediaobject">
+            <img src="../pics/glider.png" alt="hacker emblem"/>
+          </div>
+
+<table width="40%" align="center" summary="Footer"> <!-- Beginn Footer -->
+  <tbody>
+    <tr>
+      <td bgcolor="#607565" align="center"> <font size="2">
+      <font color="#8daa94"> <b>&lt;</b></font> &copy;2000-2009 <a href="mailto:bergner@linuxtaskforce.de">Sven Bergner</a> <font color="#8daa94"> <b>&gt;</b></font> </font> </td>
+    </tr>
+  </tbody>
+</table> <!-- Ende Footer -->
+
+<center>
+<a href="http://www.catb.org/hacker-emblem/"><img src="http://www.catb.org/hacker-emblem/glider-small.png" alt="Hacker Emblem"/></a>
+<a href="http://jigsaw.w3.org/css-validator/">
+ <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" border="0" />
+</a>
+<a href="http://validator.w3.org/check/referer">
+<img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" border="0" />
+</a>
+<a href="http://www.anybrowser.org/campaign/">
+<img src="../pics/w3c_ab.png" alt="Best viewed with any browser." border="0"></img>
+</a>
+<a href="http://www.pgpi.org/download/"><img src="../pics/pgp-now.png" border="0" alt="pgp now"></img></a>
+</center>
+<br/><br/>
+<center>
+<a href="http://www.mountaindew.de" target="_top"><img src="http://www.mountaindew.de/mdbanner.gif" width="470" height="60" border="0" alt="Mountain Dew"></img></a>
+</center>
+ </body>
+</html>

@@ -1,0 +1,82 @@
+<!-- Design by Leandro Pereira Copyleft (c) 2000 < leandro@linuxmag.com.br > -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//DE"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>LinuxTaskForce: Index</title>
+  <link rev="made" href="mailto:bergner@linuxtaskforce.de">
+  <link rel="stylesheet" href="../sitestyle.css" type="text/css">
+  <meta name="description" content="Wie &auml;ndere ich die
+  Tastenbelegung der Textkonsole?">
+</head>
+
+<body>
+
+<center>
+  <h1>Linux Task Force</h1>
+</center> <!-- Ende Kopfteil -->
+
+<table align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#607565" align="center">
+        <font color="#8daa94"><b>&lt;</b></font> <a href="../index.html">Index</a>
+        <font color="#8daa94">/</font> <a href="../nanoblog/index.html">Blog</a>
+        <font color="#8daa94">/</font> <a href="../projekte.html">Projekte</a>
+        <font color="#8daa94">/</font> <a href="faqhowto.html"><b>FAQs &amp; HowTos</b></a>
+        <font color="#8daa94">/</font> <a href="../uebermich.html">&Uuml;ber mich</a>
+        <font color="#8daa94">/</font> <a href="../links.html">Links</a>
+        <font color="#8daa94"><b>&gt;</b></font>
+      </td>
+    </tr>
+  </tbody>
+</table> <!-- Ende Menu -->
+
+<div id="Content">
+  <font color="#8daa94" size="+2">{<font size="3"
+  color="#ffffff"><b>Tastaturbelegung der Text-Konsole anpassen.</b></font>}</font>
+  Letzte &Auml;nderung: <script language="JavaScript" src="../datestamp.js"></script><br/>
+  <br/>
+   <dl>
+    <dt>Wie finde ich den richtigen Keycode?</dt>
+    <dd>Bei der Suche nach dem richtigen Keycode hilft ein kleine
+        Kommandozeilenprogramm mit dem Name <strong>showkey</strong>. Bei
+        Debian GNU/Linux ist dieses Tool im Paket
+        <strong>console-tools</strong> enthalten.
+    </dd>
+    <dt>Wo werden die Keycodes eingetragen?</dt>
+    <dd> Unter Debian GNU/Linux befindet sich die benutze Keymap unter
+         /etc/console/boottime.kmap.gz. Um diese Datei Editieren zu
+         k&ouml;nnen muss sie zun&auml;chst entpackt werden.<strong>gunzip
+         boottime.kmap.gz</strong>. Jetzt kann die Datei mit
+         <strong>$EDITOR boottime.kmap</strong> bearbeitet werden.
+         Nachdem die &Auml;nderungen durchgef&uuml;hrt wurden sollte
+         die Datei wieder komprimiert werden. Das geht mit dem
+         Kommando <strong>gzip -9 boottime.kmap</strong>.
+    </dd>
+  </ul>
+</div>
+
+<table width="40%" align="center"> <!-- Beginn Footer -->
+  <tbody>
+    <tr>
+      <td bgcolor="#607565" align="center"> <font size="2">
+      <font color="#8daa94"> <b>&lt;</b></font> copyright &copy;2000-2005 <a href="mailto:bergner@linuxtaskforce.de">Sven Bergner</a> <font color="#8daa94"> <b>&gt;</b></font> </font> </td>
+    </tr>
+  </tbody>
+</table> <!-- Ende Footer -->
+
+<div align="center" id="banner">
+<a href="http://www.catb.org/hacker-emblem/"><img src="http://www.catb.org/hacker-emblem/glider-small.png" border="0" alt="Hacker Emblem" /></a>
+<img src="../pics/anybrowser3.png" alt="Best viewed with any browser." border="0">
+<a href="http://petition.eurolinux.org"><img src="http://aful.org/images/patent_button.png" border="0"></a>
+<a href="http://www.gnu.org/software/emacs/">
+ <img src="../pics/madeemacs.png" alt="Made with gnu emacs." border="0"></img>
+</a>
+<a href="http://www.pgpi.org/download/"><img src="../pics/pgp-now.png" border="0" alt="pgp now"></img></a>
+</div>
+
+</body>
+</html>
