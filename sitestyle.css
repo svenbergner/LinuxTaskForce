@@ -2,23 +2,6 @@
  * I changed some colors to fit my homepage design.
  */
 
-/* Originally cribbed from http://bluerobot.com/web/layouts/layout1.html
- * However, people who merge the hotlink colors are evil and should be killed,
- * so I removed that.  Fixing font sizes in pixels is evil, too; is much as
- * possible I has move all dimensions to be relative to the associated font
- * size. Finally, light grey is a great background color, but lousy for
- * foreground text on white.
- */
-
-/*
-body { 
-      background-attachment: fixed; 
-      background-image: URL(http://pobox.com/~kragen/kjlogobg.png); 
-      background-position: center;
-      background-repeat: no-repeat;
-}
-*/
-
 body {
 	margin:0;
 	padding:0;
@@ -95,7 +78,6 @@ a {
 	font-family:verdana, arial, helvetica, sans-serif;
 	}
 a:hover   {background-color:#607565;text-decoration:underline;}
-/*a:link    {color:#8daa94;}*/
 a:link	  {color: #F5F5DC/*beige*/; text-decoration:underline;}
 a:visited {color:#ffffff;text-decoration:underline;}
 
@@ -108,24 +90,8 @@ a:visited {color:#ffffff;text-decoration:underline;}
 	border-color:black;
 	border-width:1px 0;
 	background-color:#eee;
-
-/* Here is the ugly brilliant hack that protects IE5/Win from its own
-stupidity.  Thanks to Tantek Celik for the hack and to Eric Costello
-for publicizing it.  IE5/Win incorrectly parses the "\"}"" value,
-prematurely closing the style declaration. The incorrect IE5/Win value
-is above, while the correct value is below. See
-http://glish.com/css/hacks.asp for details. */
-
-	voice-family: "\"}\"";
-	voice-family:inherit;
-	height:14px; /*1ex+3px;*/ /* UNTESTED!  Was 14px */
+	height:14px;
 	}
-/* I've heard this called the "be nice to Opera 5" rule. Basically, it
-feeds correct length values to user agents that exhibit the parsing
-error exploited above yet get the CSS box model right and understand
-the CSS2 parent-child selector. ALWAYS include a "be nice to Opera 5"
-rule every time you use the Tantek Celik hack (above). */
-body>#Header {height:14px;}
 
 #RSS-Feeds{float:right;}
 
@@ -143,13 +109,7 @@ body>#Header {height:14px;}
 	padding:0.5em;
 	background-color:#eee;
 	border:1px dashed #999;
-/* Again, the ugly brilliant hack. */
-	voice-family: "\"}\"";
-	voice-family:inherit;
-	width:8em;
 	}
-/* Again, "be nice to Opera 5". */
-body>#Menu {width:8em;}
 
 /* For convenience */
 .centered {
