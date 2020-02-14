@@ -1,8 +1,0 @@
-TITLE: Ein Menu für alle(s)
-AUTHOR: Sven Bergner
-DATE: Samstag, den 04.10. 2003 um 19:51 Uhr
------
-BODY:
-<p>Menuzeile vereinheitlicht. Hoffentlich habe ich nichts &uuml;bersehen. ;-)
-</p>
-END-----

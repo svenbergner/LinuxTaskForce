@@ -1,7 +1,0 @@
-TITLE: Sicher ist sicher!!!
-AUTHOR: Sven Bergner
-DATE: Donnerstag, den 16.10.2003 um 21:00 Uhr
------
-BODY:
-<p>Mein GnuPG-Key ist jetzt auf der Seite <a href="http://www.linuxtaskforce.de/uebermich.html">&uuml;ber mich</a> zu finden.</p>
-END-----

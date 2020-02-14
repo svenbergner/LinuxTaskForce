@@ -1,8 +1,0 @@
-TITLE: Neustart der Seite
-AUTHOR: Sven Bergner
-DATE: Samstag, den 27.07.2002 um 12:19  Uhr
------
-BODY:
-<p>Neustart der Seite <a href="http://www.LinuxTaskForce.de">www.LinuxTaskForce.de</a> fast komplett auf Deutsch!
-</p>
-END-----

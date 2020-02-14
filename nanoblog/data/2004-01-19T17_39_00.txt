@@ -1,8 +1,0 @@
-TITLE: Immer noch nix Neues :-(
-AUTHOR: Sven Bergner
-DATE: Montag, den 19. Januar 2004 um 17:39 Uhr
------
-BODY:
-<p>Ich habe zwar an ESR eine Mail geschickt, aber bis heute wurde der
-Link auf seiner Seite noch nicht angepasst.</p>
-END-----
