@@ -1,9 +1,0 @@
-TITLE: Tabelle entfernt
-AUTHOR: Sven Bergner
-DATE: Donnerstag, den 16.10.2003 um 21:46 Uhr
------
-BODY:
-<p>Wieder eine weitere unn&ouml;tige Tabelle entfernt. ;-) Mein Ziel
-   ist es auf m&ouml;glichst alle Tabellen zu verzichten.
-</p>
-END-----

@@ -1,9 +1,0 @@
-TITLE: Ich bin einfach zu ungeduldig ;-)
-AUTHOR: Sven Bergner
-DATE: Mittwoch, den 21. Januar 2004 um 17:36 Uhr
------
-BODY:
-<p>Seit gestern ist meine &uuml;berarbeitete &Uuml;bersetzung des Hacker-Howto von
-Eric S. Raymond unter den Links zu finden. Ich bin mal gespannt, wie
-sich das auf die Pagehits meiner Seite auswirkt.</p>
-END-----

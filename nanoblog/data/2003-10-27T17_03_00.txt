@@ -1,7 +1,0 @@
-TITLE: Wenn falsch, dann richtig ;-)
-AUTHOR: Sven Bergner
-DATE: Montag, den 27.10.2003 um 17:03 Uhr
------
-BODY:
-<p>Der MountainDew-Banner-Link war konsequent falsch. Wurde jetzt korrigiert. ;-)</p>
-END-----

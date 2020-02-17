@@ -1,7 +1,0 @@
-TITLE: Diplomarbeit 
-AUTHOR: Sven Bergner
-DATE: Donnerstag, den 12.12.2002 um 16:53 Uhr
------
-BODY:
-<p>Meine Diplomarbeit &uuml;ber Refactoring in der Praxis f&auml;ngt langsam an Formen an zunehmen.</p>
-END-----
