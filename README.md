@@ -1,2 +1,4 @@
 # LinuxTaskForce
-Code of LinuxTaskForce.de Web-Site
+HTML-Code der LinuxTaskForce.de Web-Site
+
+- Redesign und Aktualisierung der vollkommen veralteten Seite
