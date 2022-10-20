@@ -1,13 +1,10 @@
-/* I took this file from Eric S. Raymonds homepage.
- * I changed some colors to fit my homepage design.
- */
-
 body {
-	margin:0;
-	padding:0;
+	margin-left:10vw;
+        margin-right:10vw;
+	padding:50;
 	font-family:verdana, arial, helvetica, sans-serif;
-	color:#ffffff;
-	background-color:#445448;
+	color:#333;
+	background-color:#ccd;
 }
 
 p {
@@ -18,7 +15,7 @@ p {
 }
 
 span.separator {
-	color:#8daa94;
+	color:#333;
 }
 
 span.pagetitle
@@ -28,17 +25,20 @@ span.pagetitle
 		color:#8daa94;
 	}
 
-span.pagename{font-size:smaller;color:#ffffff;}
+span.pagename{
+    font-size:smaller;
+    color:#ffffff;
+}
 
 span.footer
 	{
 		font-size:normal;
-		color:#ffffff;
-		background-color:#607565;
+		background-color:darkgrey;
 		text-align:center;
-		padding: 2px 20px;
+		padding: 1em;
+                border-radius:1em;
 	}
-#Content>p {text-indent:2em; margin:0;}
+#Content>p {text-indent:2em; margin:20;}
 #Content>p+p {text-indent:2em;}
 
 h1 {
@@ -77,8 +77,8 @@ a {
 	text-decoration:none;
 	font-family:verdana, arial, helvetica, sans-serif;
 	}
-a:hover   {background-color:#607565;text-decoration:underline;}
-a:link	  {color: #F5F5DC/*beige*/; text-decoration:underline;}
+a:hover   {background-color:darkgrey;text-decoration:underline;}
+a:link	  {color:grey; text-decoration:underline;}
 a:visited {color:#ffffff;text-decoration:underline;}
 
 #Header {
@@ -102,13 +102,11 @@ a:visited {color:#ffffff;text-decoration:underline;}
 	}
 
 #Menu {
-	position:absolute;
-	top:80px;
-	left:20px;
-	width:8em;
+        align:center;
 	padding:0.5em;
 	background-color:#eee;
 	border:1px dashed #999;
+        margin:2em;
 	}
 
 /* For convenience */
