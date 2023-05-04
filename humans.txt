@@ -1,0 +1,10 @@
+/* Team */
+Your Title: Sven Bergner
+Twitter: @SvenBergnerLTF
+Location: Neustadt/Germany
+
+/* Site */
+Last update: 2023/04/14
+Standards: HTML5, CSS3
+Software: vim, git
+
